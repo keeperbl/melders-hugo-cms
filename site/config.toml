@@ -1,9 +1,90 @@
-baseurl = "/"
-languageCode = "en-us"
-languageLang = "en"
-title = "Homepage"
+theme = "bento"
+languageCode = "ru-ru"
+baseurl = "https://www.melders.ru/"
+title = "Актер Роман Мелдерс"
 
-# RSS, categories and tags disabled for an easy start
-# See configuration options for more details: 
-# https://gohugo.io/getting-started/configuration/#toml-configuration
-disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+author = "Ivan Kozlov"
+copyright = "MIT"
+
+[taxonomies]
+category = "актеры"
+tag = "актер, детиактеры, дети"
+
+# Better code higlighting
+# via https://discourse.gohugo.io/t/pygmentscodefences-how-to-choose-themes/3842/3
+pygmentsCodefences = true
+pygmentsStyle = "vs"
+
+# Integrations
+googleAnalytics = "G-YN0H12MK6L"
+disqusShortname = "RomanMeldersActor"
+
+# Hightlight theme
+[markup.highlight]
+  style = "github"
+
+# Allow HTML rendering inside markdown
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  # Show intro in the home page (with headline and description)
+  intro = true
+  headline = "Роман Мелдерс"
+  description = "Маленький актер с большими амбициями."
+
+  # Copyright note in the footer
+  copyright = "Copyright © 2020 Р.Мелдерс"
+
+  # Image in the homepage. You can setup a different image for social media
+  cover = "images/bg2.jpg"
+  ogImage = "images/og_image.jpg"
+
+  # Social media usernames
+  github = "https://kinolift.ru/16742"
+  facebook = "roman.melders"
+  instagram = "roman.melders"
+  vkontakte = "https://vk.com/roman.melders"
+  twitter = "roman.melders"
+  linkedin = "roman.melders"
+  #youtube = "###"
+  email = "7774142@mail.ru"
+
+  # Learn more about webmention 
+  # https://sebastiandedeyne.com/adding-webmentions-to-my-blog/
+  # webmention = ""
+  # productionBaseUrl is need if you want to receive webmentions in local environment
+  # productionBaseUrl = "https://yourwebsite.com"
+
+  # Avatar (shown in the homepage)
+  avatar = "images/avatar1.jpg"
+  # Bio is shown in the end of posts
+  authorBio = "Добро пожаловать в мой <a href='#'>Instagram</a>"
+
+# If you want to use fathom (https://usefathom.com) for analytics, add this section
+#[params.fathomAnalytics]
+  #siteID = "XXXXX"
+  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
+  #serverURL = "analytics.example.com"
+
+# If you want to use umami (https://umami.is/) for analytics, add this section
+#[params.umami]
+#  siteID = "XXXXX"
+#  trackerScript = "//umami.example.com/umami.js"
+
+# Items in the top menu
+[menu]
+  [[menu.main]]
+      name = "О себе"
+      url = "/about"
+      weight = 1
+
+  [[menu.main]]
+      name = "Портфолио"
+      url = "/archives"
+      weight = 1
+
+  [[menu.main]]
+      name = "Фото"
+      url = "/photo"
+      weight = 1
