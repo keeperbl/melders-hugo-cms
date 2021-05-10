@@ -1,6 +1,6 @@
 theme = "bento"
 languageCode = "ru-ru"
-baseurl = "https://melders-ru.netlify.app/"
+baseurl = "https://www.melders.ru/"
 title = "Актер Роман Мелдерс"
 enableRobotsTXT = true
 
