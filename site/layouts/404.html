@@ -1,6 +1,16 @@
-{{ define "main" }}
-
-<h1>Nothing Here...</h1>
-<h3><a href="{{ "/" | relURL }}">Go Home</a></h3>
-
-{{ end }}
+<!DOCTYPE html>
+<html lang='{{ .Site.LanguageCode }}'>
+  {{- partial "head.html" . -}}
+  <body class="bg-gradient flex flex-col min-h-screen">
+    {{- partial "header.html" . -}}
+    <main class="flex-1 mt-12 max-w-3xl mt-32 mx-auto text-gray-700 w-full">
+      <article class="article">
+        <div class="intro">
+          <h1>Неизвестная страница</h1>
+          <p>Ошибка 404</p>
+        </div>
+      </article>
+    </main>
+    {{- partial "footer.html" . -}}
+  </body>
+</html>
