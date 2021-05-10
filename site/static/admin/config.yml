@@ -1,45 +1,65 @@
-theme: bento
-languageCode: ru-ru
-baseurl: 'https://melders-ru.netlify.app/'
-title: Актер Роман Мелдерс
-enableRobotsTXT: true
-author: Ivan Kozlov
-copyright: MIT
-taxonomies:
-  category: актеры
-  tag: 'актер, детиактеры, дети'
-  pygmentsCodefences: true
-  pygmentsStyle: vs
-  googleAnalytics: G-PHBR4V8JVL
-  disqusShortname: melders
-markup:
-  highlight:
-    style: github
-  goldmark:
-    renderer:
-      unsafe: true
-params:
-  intro: true
-  headline: Роман Мелдерс
-  description: Маленький актер с большими амбициями.
-  copyright: Copyright © 2020 Р.Мелдерс
-  cover: images/bg2.jpg
-  ogImage: images/og_image.jpg
-  github: 'https://kinolift.ru/16742'
-  facebook: roman.melders
-  instagram: roman.melders
-  vkontakte: 'https://vk.com/roman.melders'
-  email: 7774142@mail.ru
-  avatar: images/avatar1.jpg
-  authorBio: 'Посетите мой <a href=''https://kinolift.ru/16742''>Кинолифт</a>'
-menu:
-  main:
-    - name: О себе
-      url: /about
-      weight: 1
-    - name: Портфолио
-      url: /archives
-      weight: 1
-    - name: Фото
-      url: /photo
-      weight: 1
+backend:
+  name: git-gateway
+
+media_folder: "site/static/images" # Folder where user uploaded files should go
+public_folder: "images"
+
+collections: # A list of collections the CMS should be able to edit
+  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Портфолио" # Used in the UI, ie.: "New Post"
+    folder: "site/content/post" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "site/content/_index.md"
+        label: "Главная"
+        name: "home"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Image, name: image, widget: image}
+      - file: "site/content/about.md"
+        label: "О себе"
+        name: "about"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Logo, name: logo, widget: image}
+          - {label: Body, name: body, widget: markdown}
+          - label: Contact Entries
+            name: contact_entries
+            widget: list
+            fields:
+              - label: Heading
+                name: heading
+                widget: string
+              - label: Text
+                name: text
+                widget: text
+      - file: "site/content/photo.md"
+        label: "Фото"
+        name: "photo"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Description, name: description, widget: string}
+      - file: "site/content/archives.md"
+        label: "Архив"
+        name: "archives"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: Values
+            name: values
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}
