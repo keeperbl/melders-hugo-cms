@@ -1,0 +1,45 @@
+theme: bento
+languageCode: ru-ru
+baseurl: 'https://melders-ru.netlify.app/'
+title: Актер Роман Мелдерс
+enableRobotsTXT: true
+author: Ivan Kozlov
+copyright: MIT
+taxonomies:
+  category: актеры
+  tag: 'актер, детиактеры, дети'
+  pygmentsCodefences: true
+  pygmentsStyle: vs
+  googleAnalytics: G-PHBR4V8JVL
+  disqusShortname: melders
+markup:
+  highlight:
+    style: github
+  goldmark:
+    renderer:
+      unsafe: true
+params:
+  intro: true
+  headline: Роман Мелдерс
+  description: Маленький актер с большими амбициями.
+  copyright: Copyright © 2020 Р.Мелдерс
+  cover: images/bg2.jpg
+  ogImage: images/og_image.jpg
+  github: 'https://kinolift.ru/16742'
+  facebook: roman.melders
+  instagram: roman.melders
+  vkontakte: 'https://vk.com/roman.melders'
+  email: 7774142@mail.ru
+  avatar: images/avatar1.jpg
+  authorBio: 'Посетите мой <a href=''https://kinolift.ru/16742''>Кинолифт</a>'
+menu:
+  main:
+    - name: О себе
+      url: /about
+      weight: 1
+    - name: Портфолио
+      url: /archives
+      weight: 1
+    - name: Фото
+      url: /photo
+      weight: 1
