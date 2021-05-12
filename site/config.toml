@@ -84,7 +84,12 @@ copyright = "MIT"
       name = "Портфолио"
       url = "/archives"
       weight = 1
-
+  
+  [[menu.main]]
+      name = "Регалии"
+      url = "/regalies"
+      weight = 1
+  
   [[menu.main]]
       name = "Фото"
       url = "/photo"
