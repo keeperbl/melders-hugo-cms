@@ -76,7 +76,7 @@ copyright = "MIT"
 # Items in the top menu
 [menu]
   [[menu.main]]
-      name = "О себе"
+      name = "Биография"
       url = "/about"
       weight = 1
 
