@@ -1,5 +1,5 @@
 ---
-title: О себе
+title: Биография
 description: Простой мальчик, хороший актер
 date: 2021-04-26
 aliases:
