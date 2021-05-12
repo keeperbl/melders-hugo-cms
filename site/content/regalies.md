@@ -15,9 +15,7 @@ hideComments = "true"
 
 
 ##
-```
-Награды и Дипломы:
-```
+
 
 {{< gallery dir="/images/diplom/" />}} 
 {{< load-photoswipe >}}
