@@ -4,6 +4,7 @@
   YARN_VERSION = "1.22.22"
   NPM_VERSION = "10.9.2"
   NODE_VERSION = "22"
+  NODE_OPTIONS = "--openssl-legacy-provider"
 
 [build]
   command = "yarn build"
