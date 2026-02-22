@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Театр",
+    "description": "Роли в театральных постановках и спектаклях.",
+    "icon": "bi bi-mask"
+  },
+  {
+    "title": "Кино",
+    "description": "Участие в фильмах и сериалах.",
+    "icon": "bi bi-camera-video"
+  },
+  {
+    "title": "Реклама",
+    "description": "Съёмки в рекламных роликах и фотосессиях.",
+    "icon": "bi bi-star"
+  }
+]

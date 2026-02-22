@@ -1,96 +1,114 @@
-theme = "bento"
-languageCode = "ru-ru"
-baseurl = "https://www.melders.ru/"
+baseURL = "https://www.melders.ru/"
 title = "Актер Роман Мелдерс"
+author = "Ivan Kozlov"
+languageCode = "ru-ru"
+DefaultContentLanguage = "ru"
+enableInlineShortcodes = true
+theme = "tella"
 enableRobotsTXT = true
 
-author = "Ivan Kozlov"
-copyright = "MIT"
+[services]
+  [services.googleAnalytics]
+    id = "G-PHBR4V8JVL"
 
-[taxonomies]
-  category = "актеры"
-  tag = "актер, детиактеры, дети"
-
-# Better code higlighting
-# via https://discourse.gohugo.io/t/pygmentscodefences-how-to-choose-themes/3842/3
-  pygmentsCodefences = true
-  pygmentsStyle = "vs"
-
-# Integrations
-  googleAnalytics = "G-PHBR4V8JVL"
-  disqusShortname = "melders"
-
-# Hightlight theme
-[markup.highlight]
-  style = "github"
-
-# Allow HTML rendering inside markdown
-[markup.goldmark.renderer]
-  unsafe = true
+  [services.disqus]
+    shortname = "melders"
 
 [params]
-  # Show intro in the home page (with headline and description)
-  intro = true
-  headline = "Роман Мелдерс"
-  description = "Маленький актер с большими амбициями."
+  showBlog = true
+  mainSections = ['post']
+  googleFonts = true
 
-  # Copyright note in the footer
-  copyright = "Copyright © 2020 Р.Мелдерс"
+  [params.logo]
+    main = "images/avatar1.jpg"
+    alt = "Роман Мелдерс"
+    size = "h-12"
 
-  # Image in the homepage. You can setup a different image for social media
-  cover = "images/bg2.jpg"
-  ogImage = "images/og_image.jpg"
+  [params.site]
+    name = "Роман Мелдерс"
 
-  # Social media usernames
-  github = "https://kinolift.ru/16742"
-  facebook = "roman.melders"
-  instagram = "roman.melders"
-  vkontakte = "https://vk.com/roman.melders"
-  #twitter = "roman.melders"
-  #linkedin = "roman.melders"
-  #youtube = "###"
-  email = "7774142@mail.ru"
+  [params.icon]
+    bootstrap = true
 
-  # Learn more about webmention 
-  # https://sebastiandedeyne.com/adding-webmentions-to-my-blog/
-  # webmention = ""
-  # productionBaseUrl is need if you want to receive webmentions in local environment
-  # productionBaseUrl = "https://yourwebsite.com"
+  [params.homepage_meta_tags]
+    meta_description = "Маленький актер с большими амбициями."
+    meta_og_title = "Актер Роман Мелдерс"
+    meta_og_type = "website"
+    meta_og_url = "https://www.melders.ru"
+    meta_og_image = "https://www.melders.ru/images/og_image.jpg"
+    meta_og_description = "Маленький актер с большими амбициями."
+    meta_twitter_card = "summary_large_image"
 
-  # Avatar (shown in the homepage)
-  avatar = "images/avatar1.jpg"
-  # Bio is shown in the end of posts
-  authorBio = "Посетите мой <a href='https://kinolift.ru/16742'>Кинолифт</a>"
-
-# If you want to use fathom (https://usefathom.com) for analytics, add this section
-#[params.fathomAnalytics]
-  #siteID = "XXXXX"
-  # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
-  #serverURL = "analytics.example.com"
-
-# If you want to use umami (https://umami.is/) for analytics, add this section
-#[params.umami]
-#  siteID = "XXXXX"
-#  trackerScript = "//umami.example.com/umami.js"
-
-# Items in the top menu
 [menu]
   [[menu.main]]
-      name = "Биография"
-      url = "/about"
-      weight = 1
+    identifier = "about"
+    name = "Биография"
+    url = "/about/"
+    weight = 1
 
   [[menu.main]]
-      name = "Портфолио"
-      url = "/archives"
-      weight = 1
-  
+    identifier = "archives"
+    name = "Портфолио"
+    url = "/archives/"
+    weight = 2
+
   [[menu.main]]
-      name = "Регалии"
-      url = "/regalies"
-      weight = 1
-  
+    identifier = "regalies"
+    name = "Регалии"
+    url = "/regalies/"
+    weight = 3
+
   [[menu.main]]
-      name = "Фото"
-      url = "/photo"
-      weight = 1
+    identifier = "photo"
+    name = "Фото"
+    url = "/photo/"
+    weight = 4
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Блог"
+    url = "/post/"
+    weight = 5
+
+  # Footer Menu
+  [[menu.footer]]
+    name = "Главная"
+    url = "/"
+    weight = 1
+
+  [[menu.footer]]
+    name = "ВКонтакте"
+    url = "https://vk.com/roman.melders"
+    weight = 2
+
+  [[menu.footer]]
+    name = "Кинолифт"
+    url = "https://kinolift.ru/16742"
+    weight = 3
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup]
+  [markup.highlight]
+    style = "github"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[build]
+  [build.buildStats]
+    enable = true
+  [[build.cachebusters]]
+    source = 'assets/notwatching/hugo_stats\.json'
+    target = 'css'
+
+[module]
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+  [[module.mounts]]
+    disableWatch = true
+    source = 'hugo_stats.json'
+    target = 'assets/notwatching/hugo_stats.json'
