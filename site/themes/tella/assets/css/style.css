@@ -1,7 +1,8 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "@tailwindcss/forms";
-@source "hugo_stats.json";
+@source "../../layouts/**/*.html";
+@source "../../content/**/*.md";
 
 @theme {
   --color-tlgray-200: oklch(0.9276 0.0058 264.53);
