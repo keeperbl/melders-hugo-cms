@@ -6,8 +6,6 @@ DefaultContentLanguage = "ru"
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
-yandexVerification = "78032920"
-
 
 [sitemap]
   changefreq = "weekly"
@@ -27,8 +25,8 @@ yandexVerification = "78032920"
   googleFonts = true
   # Яндекс.Метрика
   yandexMetrika = "78032920"
-  # Яндекс.Вебмастер: получить код на https://webmaster.yandex.ru → добавить сайт → HTML-тег
-  # yandexVerification = "XXXXXXXXXXXXXXXX"
+  # Яндекс.Вебмастер
+  yandexVerification = "78032920"
 
   [params.logo]
 #    main = "images/avatar1.jpg"
