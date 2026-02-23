@@ -25,6 +25,8 @@ yandexVerification = "78032920"
   showBlog = true
   mainSections = ['post']
   googleFonts = true
+  # Яндекс.Метрика
+  yandexMetrika = "78032920"
   # Яндекс.Вебмастер: получить код на https://webmaster.yandex.ru → добавить сайт → HTML-тег
   # yandexVerification = "XXXXXXXXXXXXXXXX"
 
