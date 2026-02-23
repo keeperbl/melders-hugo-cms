@@ -14,5 +14,6 @@
     "title": "Связаться",
     "description": "с агентом",
     "icon": "bi bi-star"
+    "link": "/contacts/"
   }
 ]
