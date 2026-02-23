@@ -16,8 +16,7 @@ hideComments = "true"
 
 ##
 ```
-На съемках мини-сериала "Дневник Дальнобойщика" (2020):
-```
+Фото:
 
-{{< gallery dir="/images/driver/" />}} 
+{{< gallery dir="/images/" />}} 
 {{< load-photoswipe >}}
