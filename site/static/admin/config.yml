@@ -3,7 +3,7 @@ backend:
   repo: keeperbl/melders-hugo-cms
   branch: master
   auth_type: pkce
-  app_id: REPLACE_WITH_CLIENT_ID
+  app_id: Ov23likXzS8uWPP2BlB8
 
 media_folder: "site/static/images" # Folder where user uploaded files should go
 public_folder: "/images"
