@@ -1,21 +1,11 @@
 +++
 title = "Фотоальбом"
-description = "Просто фотки"
-#date = "2000-01-01"
+description = "Фотографии актёра Романа Мелдерса"
 author = "Р.Мелдерс"
-#type = "Page"
 hideMetadata = "true"
 hideAuthorBio = "true"
 hideComments = "true"
-#hideSuggestions = "true"
-
 +++
 
-
-
-##
-```
-Фото:
-
-{{< gallery dir="/images/" />}} 
+{{< gallery dir="/images/photo/" />}}
 {{< load-photoswipe >}}
