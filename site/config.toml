@@ -90,6 +90,7 @@ enableRobotsTXT = true
     url = "https://vk.ru/romanmelders"
     weight = 1
 
+
   [[menu.footer]]
     name = "Кинолифт"
     url = "https://kinolift.ru/16742"
@@ -104,6 +105,11 @@ enableRobotsTXT = true
     name = "Инстаграм"
     url = "https://www.instagram.com/roman.melders"
     weight = 4
+    
+  [[menu.footer]]
+    name = "TG канал"
+    url = "https://t.me/MeldersR"
+    weight = 5
 
 [taxonomies]
   category = "categories"
