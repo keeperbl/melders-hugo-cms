@@ -38,7 +38,7 @@ jobs:
             | tar -xz -C /usr/local/bin hugo
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --no-frozen-lockfile
 
       - name: Build Tailwind CSS
         run: node_modules/.bin/tailwindcss -i site/themes/tella/assets/css/style.css -o site/static/css/tella.css --minify
