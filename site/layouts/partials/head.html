@@ -1,0 +1,149 @@
+{{- partial "analytics" . -}}
+<meta charset="utf-8">
+
+{{/* ─── Title ─── */}}
+<title>{{- if .IsHome -}}{{ site.Title }} — Официальный сайт{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}</title>
+
+{{/* ─── Meta base ─── */}}
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="index, follow">
+
+{{/* ─── Meta description ─── */}}
+{{- $desc := "" -}}
+{{- if .Description -}}
+  {{- $desc = .Description -}}
+{{- else if .IsHome -}}
+  {{- $desc = site.Params.homepage_meta_tags.meta_description -}}
+{{- else if .Summary -}}
+  {{- $desc = .Summary | truncate 160 -}}
+{{- end -}}
+{{- if $desc -}}
+<meta name="description" content="{{ $desc }}">
+{{- end -}}
+
+{{/* ─── Canonical URL ─── */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* ─── Open Graph ─── */}}
+{{- $ogTitle := .Title -}}
+{{- $ogDesc := $desc -}}
+{{- $ogURL := .Permalink -}}
+{{- $ogType := "article" -}}
+{{- $ogImage := "" -}}
+{{- if .IsHome -}}
+  {{- $ogTitle = site.Params.homepage_meta_tags.meta_og_title | default site.Title -}}
+  {{- $ogType = "website" -}}
+  {{- $ogImage = site.Params.homepage_meta_tags.meta_og_image -}}
+{{- else if .Params.image -}}
+  {{- $ogImage = .Params.image | absURL -}}
+{{- else -}}
+  {{- $ogImage = site.Params.homepage_meta_tags.meta_og_image -}}
+{{- end -}}
+
+<meta property="og:type" content="{{ $ogType }}">
+<meta property="og:site_name" content="{{ site.Params.site.name | default site.Title }}">
+<meta property="og:title" content="{{ $ogTitle }}">
+{{- if $ogDesc }}
+<meta property="og:description" content="{{ $ogDesc }}">
+{{- end }}
+<meta property="og:url" content="{{ $ogURL }}">
+{{- if $ogImage }}
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+{{- end }}
+<meta property="og:locale" content="ru_RU">
+
+{{/* ─── Twitter / VK Card ─── */}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $ogTitle }}">
+{{- if $ogDesc }}
+<meta name="twitter:description" content="{{ $ogDesc }}">
+{{- end }}
+{{- if $ogImage }}
+<meta name="twitter:image" content="{{ $ogImage }}">
+{{- end }}
+
+{{/* ─── Yandex Webmaster verification ─── */}}
+{{- with site.Params.yandexVerification }}
+<meta name="yandex-verification" content="{{ . }}">
+{{- end }}
+
+{{/* ─── JSON-LD structured data ─── */}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Роман Мелдерс",
+  "url": "{{ site.BaseURL }}",
+  "image": "{{ site.Params.homepage_meta_tags.meta_og_image }}",
+  "jobTitle": "Актёр",
+  "description": "{{ site.Params.homepage_meta_tags.meta_description }}",
+  "birthDate": "2012",
+  "nationality": "RU",
+  "sameAs": [
+    "https://www.kinopoisk.ru/name/6624997/",
+    "https://www.kino-teatr.ru/kino/acter/c/ros/560649/works/",
+    "https://kinolift.ru/16742",
+    "https://casting.filmtoolz.ru/3318251/",
+    "https://vk.ru/romanmelders"
+  ]
+}
+</script>
+{{- else if eq .Section "post" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ $desc | jsonify }},
+  "datePublished": "{{ .Date.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+  "url": "{{ .Permalink }}",
+  {{- if $ogImage }}
+  "image": "{{ $ogImage }}",
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": "Роман Мелдерс",
+    "url": "{{ site.BaseURL }}"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Роман Мелдерс",
+    "url": "{{ site.BaseURL }}"
+  }
+}
+</script>
+{{- end }}
+
+{{/* ─── Fonts & Icons ─── */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap">
+<noscript><link rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"></noscript>
+
+{{/* ─── Favicons ─── */}}
+<link rel="icon" type="image/png" href="{{ "favicon-64x64.png" | relURL }}" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}" />
+<link rel="shortcut icon" href="{{ "favicon.ico" | relURL }}" />
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
+<meta name="apple-mobile-web-app-title" content="{{ site.Title }}" />
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}" />
+
+{{ if .Site.Params.icon.fontawesome }}
+<link href='{{ "/css/fa7.min.css" | relURL }}' rel="stylesheet" type="text/css">
+{{ end }}
+{{ if .Site.Params.icon.bootstrap }}
+<link href='{{ "/css/bootstrap-icons.min.css" | relURL }}' rel="stylesheet" type="text/css">
+{{ end }}
+
+{{/* ─── Stylesheets ─── */}}
+<link rel="stylesheet" href='{{ "/css/tella.css" | relURL }}'>
+{{ if .IsHome }}
+<link rel="stylesheet" href='{{ "/css/splide.min.css" | relURL }}'>
+{{ end }}
+<link rel="stylesheet" href='{{ "/css/custom.css" | relURL }}'>

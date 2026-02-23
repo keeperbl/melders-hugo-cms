@@ -7,6 +7,11 @@ enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
 
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 [services]
   [services.googleAnalytics]
     id = "G-PHBR4V8JVL"
@@ -18,6 +23,8 @@ enableRobotsTXT = true
   showBlog = true
   mainSections = ['post']
   googleFonts = true
+  # Яндекс.Вебмастер: получить код на https://webmaster.yandex.ru → добавить сайт → HTML-тег
+  # yandexVerification = "XXXXXXXXXXXXXXXX"
 
   [params.logo]
 #    main = "images/avatar1.jpg"
@@ -31,12 +38,12 @@ enableRobotsTXT = true
     bootstrap = false
 
   [params.homepage_meta_tags]
-    meta_description = "Маленький актер с большими амбициями."
-    meta_og_title = "Актер Роман Мелдерс"
+    meta_description = "Роман Мелдерс — российский актёр, 13 лет, Санкт-Петербург. Фильмография, фото, контакты. Снялся в сериалах Котострофа, Кто быстрее, Скорая помощь."
+    meta_og_title = "Роман Мелдерс — актёр"
     meta_og_type = "website"
     meta_og_url = "https://www.melders.ru"
     meta_og_image = "https://www.melders.ru/images/sts_kto_bystree_-2-m.jpg"
-    meta_og_description = "Маленький актер с большими амбициями."
+    meta_og_description = "Роман Мелдерс — российский актёр, 13 лет, Санкт-Петербург. Фильмография, фото, контакты."
     meta_twitter_card = "summary_large_image"
 
 [menu]

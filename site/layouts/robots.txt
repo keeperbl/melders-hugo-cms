@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /tags/
+Disallow: /categories/
+
+User-agent: Yandex
+Disallow: /admin/
+Disallow: /tags/
+Disallow: /categories/
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml
+Host: www.melders.ru
