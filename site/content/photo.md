@@ -2,7 +2,6 @@
 title = "Фотоальбом"
 description = "Просто фотки"
 #date = "2000-01-01"
-aliases = ["о себе","photo","фото"]
 author = "Р.Мелдерс"
 #type = "Page"
 hideMetadata = "true"

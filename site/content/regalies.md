@@ -2,7 +2,6 @@
 title = "Награды и Дипломы"
 description = "Достижения на различных конкурсах"
 #date = "2000-01-01"
-aliases = ["о себе","photo","фото"]
 author = "Р.Мелдерс"
 #type = "Page"
 hideMetadata = "true"
