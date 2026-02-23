@@ -28,7 +28,7 @@ enableRobotsTXT = true
     name = "Роман Мелдерс"
 
   [params.icon]
-    bootstrap = true
+    bootstrap = false
 
   [params.homepage_meta_tags]
     meta_description = "Маленький актер с большими амбициями."
