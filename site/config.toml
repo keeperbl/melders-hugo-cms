@@ -20,9 +20,9 @@ enableRobotsTXT = true
   googleFonts = true
 
   [params.logo]
-    main = "images/avatar1.jpg"
-    alt = "Роман Мелдерс"
-    size = "h-12"
+#    main = "images/avatar1.jpg"
+#    alt = "Роман Мелдерс"
+#    size = "h-12"
 
   [params.site]
     name = "Роман Мелдерс"
