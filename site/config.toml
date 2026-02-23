@@ -49,7 +49,7 @@ enableRobotsTXT = true
   [[menu.main]]
     identifier = "archives"
     name = "Портфолио"
-    url = "/archives/"
+    url = "/post/"
     weight = 2
 
   [[menu.main]]
@@ -65,9 +65,9 @@ enableRobotsTXT = true
     weight = 4
 
   [[menu.main]]
-    identifier = "post"
-    name = "Блог"
-    url = "/post/"
+    identifier = "contacts"
+    name = "Контакты"
+    url = "/contacts/"
     weight = 5
 
   # Footer Menu
