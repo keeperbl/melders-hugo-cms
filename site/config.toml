@@ -6,6 +6,8 @@ DefaultContentLanguage = "ru"
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
+yandexVerification = "78032920"
+
 
 [sitemap]
   changefreq = "weekly"
