@@ -7,5 +7,10 @@
     "title": "Руки Вверх",
     "image": "images/руки_вверх.jpg",
     "color": "text-white"
+  },
+  {
+    "title": "Котострофа",
+    "image": "images/котострофа.jpg",
+    "color": "text-white"
   }
 ]
