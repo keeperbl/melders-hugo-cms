@@ -1,8 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: keeperbl/melders-hugo-cms
   branch: master
-  identity_url: https://melders-hugo-cms.netlify.app/.netlify/identity
-  gateway_url: https://melders-hugo-cms.netlify.app/.netlify/git
+  base_url: https://melders-cms-auth.kip-be1.workers.dev
 
 media_folder: "site/static/images" # Folder where user uploaded files should go
 public_folder: "/images"
