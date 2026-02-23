@@ -6,13 +6,13 @@
     "link": "/melders_card.pdf"
   },
   {
-    "title": "Кино",
-    "description": "Участие в фильмах и сериалах.",
+    "title": "Шоурил",
+    "description": "Нарезка роликов из фильмов",
     "icon": "bi bi-camera-video"
   },
   {
-    "title": "Реклама",
-    "description": "Съёмки в рекламных роликах и фотосессиях.",
+    "title": "Связаться",
+    "description": "с агентом",
     "icon": "bi bi-star"
   }
 ]
