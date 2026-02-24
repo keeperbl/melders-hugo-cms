@@ -100,16 +100,11 @@ enableRobotsTXT = true
     name = "Кинотеатр"
     url = "https://www.kino-teatr.ru/kino/acter/c/ros/560649/works/"
     weight = 3
-
-  [[menu.footer]]
-    name = "Инстаграм"
-    url = "https://www.instagram.com/roman.melders"
-    weight = 4
     
   [[menu.footer]]
     name = "TG канал"
     url = "https://t.me/MeldersR"
-    weight = 5
+    weight = 4
 
 [taxonomies]
   category = "categories"
