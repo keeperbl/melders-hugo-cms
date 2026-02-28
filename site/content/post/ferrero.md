@@ -1,8 +1,9 @@
 +++
-author = "Hugo Authors"
+author = "Р.Мелдерс"
 title = "Реклама Ferrero"
 date = "2019-12-16"
 description = "Первый опыт съемок в рекламе"
+image = "/images/ferrero.JPG"
 tags = [
     "реклама"
 ]
