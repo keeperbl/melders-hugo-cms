@@ -1,36 +1,36 @@
 [
   {
     "title": "Роман Мелдерс",
-    "image": "images/Роман0.JPG"
+    "image": "/images/Роман0.JPG"
   },
   {
     "title": "Более 26 ролей в фильмах и сериалах",
-    "image": "images/Роман2.JPG",
+    "image": "/images/Роман2.JPG",
     "color": "text-white"
   },
   {
     "title": "Две роли в рекламе",
-    "image": "images/Роман3.JPG",
+    "image": "/images/Роман3.JPG",
     "color": "text-white"
   },
   {
     "title": "Две озвучки: ('''Eternals''', '''Dr. Brain'''",
-    "image": "images/Роман5.JPG",
+    "image": "/images/Роман5.JPG",
     "color": "text-white"
   },
   {
     "title": "Москва / Санкт-Петербург",
-    "image": "images/IMG_6984.JPG",
+    "image": "/images/IMG_6984.JPG",
     "color": "text-white"
   },
   {
     "title": "Быстро решается на новые съемки",
-    "image": "images/Роман8.JPG",
+    "image": "/images/Роман8.JPG",
     "color": "text-white"
   },
   {
     "title": "Готов к переработкам на сменах",
-    "image": "images/Роман91.JPG",
+    "image": "/images/Роман91.JPG",
     "color": "text-white"
   }
 ]

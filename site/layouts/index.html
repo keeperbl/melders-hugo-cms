@@ -21,7 +21,7 @@
     {{ end }}
     {{ if ne .Site.Params.showBlog false }}
     <div class="mx-auto my-10 max-w-6xl px-4">
-        <h2 class="text-4xl mb-6 font-bold">Работы</h2>
+        <h2 class="text-4xl mb-6 font-bold">{{ if eq .Language.Lang "en" }}Works{{ else }}Работы{{ end }}</h2>
         {{- partial "recent.html" . -}}
     </div>
     {{ end }}
