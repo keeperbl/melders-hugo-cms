@@ -1,8 +1,8 @@
 baseURL = "https://www.melders.ru/"
 title = "Актер Роман Мелдерс"
 author = "Ivan Kozlov"
-languageCode = "ru-ru"
-DefaultContentLanguage = "ru"
+defaultContentLanguage = "ru"
+defaultContentLanguageInSubdir = false
 enableInlineShortcodes = true
 theme = "tella"
 enableRobotsTXT = true
@@ -23,15 +23,10 @@ enableRobotsTXT = true
   showBlog = true
   mainSections = ['post']
   googleFonts = true
-  # Яндекс.Метрика
   yandexMetrika = "78032920"
-  # Яндекс.Вебмастер
   yandexVerification = "78032920"
 
   [params.logo]
-#    main = "images/avatar1.jpg"
-#    alt = "Роман Мелдерс"
-#    size = "h-12"
 
   [params.site]
     name = "Роман Мелдерс"
@@ -48,61 +43,117 @@ enableRobotsTXT = true
     meta_og_description = "Роман Мелдерс — российский актёр, 13 лет, Санкт-Петербург. Фильмография, фото, контакты."
     meta_twitter_card = "summary_large_image"
 
-[menu]
-  [[menu.main]]
+# ── Russian language ──────────────────────────────────────────────────────────
+[languages.ru]
+  languageName = "RU"
+  languageCode = "ru-ru"
+  weight = 1
+  title = "Актёр Роман Мелдерс"
+
+  [languages.ru.params.site]
+    name = "Роман Мелдерс"
+
+  [[languages.ru.menus.main]]
     name = "Главная"
     url = "/"
     weight = 1
-  [[menu.main]]
+  [[languages.ru.menus.main]]
     identifier = "about"
     name = "Биография"
     url = "/about/"
     weight = 2
-
-  [[menu.main]]
-    identifier = "archives"
-    name = "Портфолио"
+  [[languages.ru.menus.main]]
+    identifier = "post"
+    name = "Фильмография"
     url = "/post/"
     weight = 3
-
-  [[menu.main]]
+  [[languages.ru.menus.main]]
     identifier = "regalies"
     name = "Регалии"
     url = "/regalies/"
     weight = 4
-
-  [[menu.main]]
+  [[languages.ru.menus.main]]
     identifier = "photo"
     name = "Фото"
     url = "/photo/"
     weight = 5
-
-  [[menu.main]]
+  [[languages.ru.menus.main]]
     identifier = "contacts"
     name = "Контакты"
     url = "/contacts/"
     weight = 6
 
-  # Footer Menu
-
-  [[menu.footer]]
+  [[languages.ru.menus.footer]]
     name = "ВКонтакте"
     url = "https://vk.ru/romanmelders"
     weight = 1
-
-
-  [[menu.footer]]
+  [[languages.ru.menus.footer]]
     name = "Кинолифт"
     url = "https://kinolift.ru/16742"
     weight = 2
-
-  [[menu.footer]]
+  [[languages.ru.menus.footer]]
     name = "Кинотеатр"
     url = "https://www.kino-teatr.ru/kino/acter/c/ros/560649/works/"
     weight = 3
-    
-  [[menu.footer]]
+  [[languages.ru.menus.footer]]
     name = "TG канал"
+    url = "https://t.me/MeldersR"
+    weight = 4
+
+# ── English language ──────────────────────────────────────────────────────────
+[languages.en]
+  languageName = "EN"
+  languageCode = "en-us"
+  weight = 2
+  title = "Actor Roman Melders"
+
+  [languages.en.params.site]
+    name = "Roman Melders"
+
+  [[languages.en.menus.main]]
+    name = "Home"
+    url = "/en/"
+    weight = 1
+  [[languages.en.menus.main]]
+    identifier = "about"
+    name = "Biography"
+    url = "/en/about/"
+    weight = 2
+  [[languages.en.menus.main]]
+    identifier = "post"
+    name = "Filmography"
+    url = "/en/post/"
+    weight = 3
+  [[languages.en.menus.main]]
+    identifier = "regalies"
+    name = "Awards"
+    url = "/en/regalies/"
+    weight = 4
+  [[languages.en.menus.main]]
+    identifier = "photo"
+    name = "Photos"
+    url = "/en/photo/"
+    weight = 5
+  [[languages.en.menus.main]]
+    identifier = "contacts"
+    name = "Contacts"
+    url = "/en/contacts/"
+    weight = 6
+
+  [[languages.en.menus.footer]]
+    name = "VKontakte"
+    url = "https://vk.ru/romanmelders"
+    weight = 1
+  [[languages.en.menus.footer]]
+    name = "Kinolift"
+    url = "https://kinolift.ru/16742"
+    weight = 2
+  [[languages.en.menus.footer]]
+    name = "Kino-Teatr"
+    url = "https://www.kino-teatr.ru/kino/acter/c/ros/560649/works/"
+    weight = 3
+  [[languages.en.menus.footer]]
+    name = "Telegram"
     url = "https://t.me/MeldersR"
     weight = 4
 

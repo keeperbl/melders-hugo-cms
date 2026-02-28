@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Download CV",
+    "description": "Actor profile with photo, parameters and contacts — PDF for print.",
+    "icon": "bi bi-file-earmark-arrow-down",
+    "link": "/melders_card_2026.pdf",
+    "target": "_blank"
+  },
+  {
+    "title": "Showreel",
+    "description": "Highlights from films and TV series",
+    "icon": "bi bi-camera-video"
+  },
+  {
+    "title": "Contact",
+    "description": "agent",
+    "icon": "bi bi-star",
+    "link": "/en/contacts/"
+  }
+]
