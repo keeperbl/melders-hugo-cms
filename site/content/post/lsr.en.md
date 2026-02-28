@@ -3,7 +3,7 @@ author = "R.Melders"
 title = "LSR Commercial"
 date = "2020-05-01"
 description = "Two commercial spots for the construction company LSR."
-image = "/images/og_image_v2.jpg"
+image = "/images/lsr1.jpg"
 tags = ["commercial", "cinema"]
 +++
 

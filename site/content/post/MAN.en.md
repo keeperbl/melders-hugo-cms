@@ -3,7 +3,7 @@ author = "R.Melders"
 title = "TV Series MAN: TRUCKER'S DIARY"
 date = "2023-11-15"
 description = "Advertising series MAN filmed in the style of quality cinema."
-image = "/images/og_image_v2.jpg"
+image = "/images/dalnoboyschik.jpeg"
 tags = ["commercial", "television"]
 +++
 

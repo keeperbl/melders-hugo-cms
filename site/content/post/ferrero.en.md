@@ -3,7 +3,7 @@ author = "R.Melders"
 title = "Ferrero Commercial"
 date = "2019-06-01"
 description = "First experience in commercial filming."
-image = "/images/og_image_v2.jpg"
+image = "/images/ferrero.JPG"
 tags = ["commercial", "cinema"]
 +++
 
