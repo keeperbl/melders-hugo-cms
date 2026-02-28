@@ -1,7 +1,7 @@
 ---
-title: 'Our Difference'
-button: 'About us'
+title: 'О Романе'
+button: 'Биография'
 weight: 2
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo,
+Роман Мелдерс — профессиональный актёр кино и дубляжа из Санкт-Петербурга. Родился 6 сентября 2012 года. Активная жизненная позиция, широкий диапазон ролей — от главных до характерных. Готов к пробам и съёмкам в Москве и Санкт-Петербурге.

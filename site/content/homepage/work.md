@@ -1,7 +1,7 @@
 ---
-title: 'We Help Business Grow'
-button: 'Our Work'
+title: 'Фильмография'
+button: 'Портфолио'
 weight: 1
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. Numquam dolores mel eu, mea docendi omittantur et, mea ea duis erat. Elit melius cu ius. Per ex novum tantas putant, ei his nullam aliquam apeirian. Aeterno quaestio constituto sea an, no eum intellegat assueverit. 
+Более 25 проектов в кино, сериалах и рекламе. Главные роли в сериалах «Котострофа», «Кто быстрее». Работа с ведущими режиссёрами российского кино и телевидения. Опыт дубляжа фильмов «Eternals» и «Dr. Brain».
