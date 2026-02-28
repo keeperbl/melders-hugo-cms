@@ -7,7 +7,7 @@
 <div class="w-full px-2 lg:max-w-full lg:flex mt-3 lg:px-0 duration-500 hover:-translate-y-1 hover:shadow-md">
   {{ if $img }}
   <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44"
-    src="{{ $img | absURL }}" loading="lazy" decoding="async" />
+    src="{{ $img | relURL }}" loading="lazy" decoding="async" />
   {{ else }}
   <img id="thumb" alt="{{.Title}}" class="aspect-video object-cover w-auto lg:h-44"
     src="{{ "/images/og_image_v2.jpg" | relURL }}" loading="lazy" decoding="async">
