@@ -1,0 +1,22 @@
+{
+  "name": "Роман Мелдерс — актёр",
+  "short_name": "Мелдерс",
+  "description": "Официальный сайт российского актёра Романа Мелдерса",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a2e",
+  "lang": "ru",
+  "icons": [
+    {
+      "src": "/favicon-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

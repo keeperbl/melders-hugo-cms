@@ -79,33 +79,79 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
 <noscript><div><img src="https://mc.yandex.ru/watch/78032920" style="position:absolute;left:-9999px;" alt=""/></div></noscript>
 
 {{/* ─── JSON-LD structured data ─── */}}
+
+{{/* WebSite schema — на всех страницах, даёт поисковикам понять структуру сайта */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Роман Мелдерс — официальный сайт",
+  "url": "{{ site.BaseURL }}",
+  "description": "Официальный сайт российского актёра Романа Мелдерса",
+  "inLanguage": "ru",
+  "author": {
+    "@type": "Person",
+    "name": "Роман Мелдерс"
+  }
+}
+</script>
+
 {{- if .IsHome }}
+{{/* Person schema — расширенный, для AI-выдачи и Knowledge Panel */}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Роман Мелдерс",
-  "url": "{{ site.BaseURL }}",
+  "alternateName": ["Roman Melders", "Р. Мелдерс"],
+  "url": "https://www.melders.ru",
   "image": "{{ site.Params.homepage_meta_tags.meta_og_image }}",
   "jobTitle": "Актёр",
-  "description": "{{ site.Params.homepage_meta_tags.meta_description }}",
-  "birthDate": "2012",
-  "nationality": "RU",
+  "description": "Роман Мелдерс — российский актёр кино, телевидения и дубляжа. Родился 6 сентября 2012 года в Санкт-Петербурге. Снялся в более чем 25 проектах.",
+  "birthDate": "2012-09-06",
+  "birthPlace": {
+    "@type": "Place",
+    "name": "Санкт-Петербург, Россия"
+  },
+  "nationality": {
+    "@type": "Country",
+    "name": "Россия"
+  },
+  "knowsAbout": ["актёрское мастерство", "кино", "дубляж", "сериалы"],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Актёр",
+    "occupationLocation": {
+      "@type": "City",
+      "name": "Санкт-Петербург"
+    }
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Представитель",
+    "name": "Ирина Мелдерс",
+    "telephone": "+7-911-777-41-42",
+    "email": "roman@melders.ru"
+  },
   "sameAs": [
     "https://www.kinopoisk.ru/name/6624997/",
     "https://www.kino-teatr.ru/kino/acter/c/ros/560649/works/",
     "https://kinolift.ru/16742",
     "https://casting.filmtoolz.ru/3318251/",
-    "https://vk.ru/romanmelders"
+    "https://vk.ru/romanmelders",
+    "https://vk.com/romanmelders",
+    "https://www.instagram.com/roman.melders",
+    "https://t.me/MeldersR"
   ]
 }
 </script>
 {{- else if eq .Section "post" }}
+{{/* CreativeWork schema для постов о фильмах/сериалах — точнее чем Article */}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": {{ .Title | jsonify }},
+  "@type": "CreativeWork",
+  "name": {{ .Title | jsonify }},
   "description": {{ $desc | jsonify }},
   "datePublished": "{{ .Date.Format "2006-01-02" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
@@ -116,13 +162,56 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
   "author": {
     "@type": "Person",
     "name": "Роман Мелдерс",
-    "url": "{{ site.BaseURL }}"
+    "url": "https://www.melders.ru"
   },
-  "publisher": {
+  "about": {
     "@type": "Person",
     "name": "Роман Мелдерс",
-    "url": "{{ site.BaseURL }}"
+    "url": "https://www.melders.ru"
+  },
+  "inLanguage": "ru",
+  "countryOfOrigin": {
+    "@type": "Country",
+    "name": "Россия"
   }
+}
+</script>
+{{- end }}
+
+{{/* BreadcrumbList — для не-главных страниц */}}
+{{- if not .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://www.melders.ru/"
+    }
+    {{- if eq .Section "post" -}}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Фильмография",
+      "item": "https://www.melders.ru/post/"
+    },{
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ .Title | jsonify }},
+      "item": "{{ .Permalink }}"
+    }
+    {{- else -}}
+    ,{
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ .Title | jsonify }},
+      "item": "{{ .Permalink }}"
+    }
+    {{- end }}
+  ]
 }
 </script>
 {{- end }}
