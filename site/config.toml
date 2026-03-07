@@ -110,6 +110,15 @@ enableRobotsTXT = true
   [languages.en.params.site]
     name = "Roman Melders"
 
+  [languages.en.params.homepage_meta_tags]
+    meta_description = "Roman Melders — Russian actor, 13, Saint Petersburg. Filmography, photos, contacts. Starred in Kotostrofa, Who's Faster, Ambulance."
+    meta_og_title = "Roman Melders — Actor"
+    meta_og_type = "website"
+    meta_og_url = "https://www.melders.ru/en/"
+    meta_og_image = "https://www.melders.ru/images/og_image_v2.jpg"
+    meta_og_description = "Roman Melders — Russian actor, 13, Saint Petersburg. Filmography, photos, contacts."
+    meta_twitter_card = "summary_large_image"
+
   [[languages.en.menus.main]]
     name = "Home"
     url = "/en/"
