@@ -13,7 +13,7 @@
 {{- if .Description -}}
   {{- $desc = .Description -}}
 {{- else if .IsHome -}}
-  {{- $desc = site.Params.homepage_meta_tags.meta_description -}}
+  {{- $desc = .Param "homepage_meta_tags.meta_description" -}}
 {{- else if .Summary -}}
   {{- $desc = .Summary | truncate 160 -}}
 {{- end -}}
@@ -52,7 +52,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 {{- end }}
-<meta property="og:locale" content="ru_RU">
+<meta property="og:locale" content="{{ if eq .Language.Lang "en" }}en_US{{ else }}ru_RU{{ end }}">
 
 {{/* ─── Twitter / VK Card ─── */}}
 <meta name="twitter:card" content="summary_large_image">
@@ -107,7 +107,7 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
   "url": "https://www.melders.ru",
   "image": "{{ site.Params.homepage_meta_tags.meta_og_image }}",
   "jobTitle": "Актёр",
-  "description": "Роман Мелдерс — российский актёр кино, телевидения и дубляжа. Родился 6 сентября 2012 года в Санкт-Петербурге. Снялся в более чем 25 проектах.",
+  "description": "Роман Мелдерс — российский детский актёр кино, телевидения и дубляжа из Санкт-Петербурга. Родился 6 сентября 2012 года. Снялся в более чем 30 проектах.",
   "birthDate": "2012-09-06",
   "birthPlace": {
     "@type": "Place",

@@ -5,6 +5,9 @@ description: Рекламный сериал MAN снятый в духе хор
 image: /images/dalnoboyschik.jpeg
 author: Роман Мелдерс
 tags:
+  - реклама
+  - сериал
+  - кино
   - кино
   - реклама
   - сериал
