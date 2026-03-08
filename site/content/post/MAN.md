@@ -12,6 +12,8 @@ tags:
   - реклама
   - сериал
   - youtube
+role: "главная роль"
+schema_type: "Movie"
 ---
 
 ##

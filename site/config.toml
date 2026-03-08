@@ -68,6 +68,11 @@ enableRobotsTXT = true
     url = "/post/"
     weight = 3
   [[languages.ru.menus.main]]
+    identifier = "casting"
+    name = "Кастинг"
+    url = "/casting/"
+    weight = 3
+  [[languages.ru.menus.main]]
     identifier = "regalies"
     name = "Регалии"
     url = "/regalies/"

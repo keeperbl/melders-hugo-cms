@@ -7,6 +7,8 @@ image = "/images/ferrero.JPG"
 tags = [
     "реклама"
 ]
+role = "главная роль"
+schema_type = "Movie"
 +++
 
 ## Реклама

@@ -12,6 +12,8 @@ tags:
   - НТВ
   - сериал
   - youtube
+role: "эпизодическая роль"
+schema_type: "TVSeries"
 ---
 
 ## Студия

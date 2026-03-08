@@ -7,6 +7,8 @@ image = "/images/lsr1.jpg"
 tags = [
     "Реклама","съемки","видео","youtube"
 ]
+role = "главная роль"
+schema_type = "Movie"
 +++
 
 
