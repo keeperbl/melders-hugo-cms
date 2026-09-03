@@ -175,6 +175,26 @@ enableRobotsTXT = true
   category = "categories"
   tag = "tags"
 
+# SEO: powers the "Другие работы" block so no post page is left orphaned
+[related]
+  includeNewer = true
+  threshold = 20
+  toLower = true
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+# SEO: tag and category list pages were 28 of the 67 URLs in the sitemap —
+# near-empty pages that diluted crawl budget and competed with real content.
+# Keep them navigable for humans, drop them from the sitemap and the index.
+[outputs]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+
 [markup]
   [markup.highlight]
     style = "github"

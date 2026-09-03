@@ -68,4 +68,6 @@
   {{/* GEO: FAQ block with FAQPage schema, rendered when front matter has `faq:` */}}
   {{- partial "faq.html" . -}}
 </div>
+{{/* SEO: auto internal linking — keeps every work reachable from its siblings */}}
+{{- if eq .Section "post" }}{{ partial "related.html" . }}{{ end -}}
 {{ end }}
