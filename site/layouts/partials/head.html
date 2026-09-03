@@ -162,13 +162,13 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
     {{- $works := where .Site.RegularPages "Section" "post" -}}
     {{- range $i, $w := $works }}{{ if $i }},{{ end }}
     {
-      "@type": {{ $w.Params.schema_type | default "TVSeries" | jsonify }},
-      "name": {{ $w.Title | jsonify }},
-      "url": {{ $w.Permalink | jsonify }}
+      "@type": {{ $w.Params.schema_type | default "TVSeries" | jsonify | safeJS }},
+      "name": {{ $w.Title | jsonify | safeJS }},
+      "url": {{ $w.Permalink | jsonify | safeJS }}
       {{- with $w.Params.role }},
-      "character": { "@type": "Person", "name": {{ . | jsonify }} }
+      "character": { "@type": "Person", "name": {{ . | jsonify | safeJS }} }
       {{- end }},
-      "datePublished": {{ $w.Date.Format "2006" | jsonify }}
+      "datePublished": {{ $w.Date.Format "2006" | jsonify | safeJS }}
     }
     {{- end }}
   ],
@@ -191,9 +191,9 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": {{ $schemaType | jsonify }},
-  "name": {{ .Title | jsonify }},
-  "description": {{ $desc | jsonify }},
+  "@type": {{ $schemaType | jsonify | safeJS }},
+  "name": {{ .Title | jsonify | safeJS }},
+  "description": {{ $desc | jsonify | safeJS }},
   "datePublished": "{{ .Date.Format "2006-01-02" }}",
   "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
   "url": "{{ .Permalink }}",
@@ -212,7 +212,7 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
         "sameAs": "https://www.kino-teatr.ru/kino/acter/c/ros/560649/works/"
       }
       {{- with .Params.role }},
-      "characterName": {{ . | jsonify }}
+      "characterName": {{ . | jsonify | safeJS }}
       {{- end }}
     }
   ]
@@ -242,14 +242,14 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
     },{
       "@type": "ListItem",
       "position": 3,
-      "name": {{ .Title | jsonify }},
+      "name": {{ .Title | jsonify | safeJS }},
       "item": "{{ .Permalink }}"
     }
     {{- else -}}
     ,{
       "@type": "ListItem",
       "position": 2,
-      "name": {{ .Title | jsonify }},
+      "name": {{ .Title | jsonify | safeJS }},
       "item": "{{ .Permalink }}"
     }
     {{- end }}
