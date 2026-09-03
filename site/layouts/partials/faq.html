@@ -1,0 +1,50 @@
+{{/* ─── FAQ block with FAQPage schema ───────────────────────────────────────
+     GEO: AI answer engines (ChatGPT, Perplexity, AI Overviews, Яндекс Нейро)
+     quote Q&A pairs directly. Each answer must be self-contained — readable
+     without the surrounding page context.
+
+     Usage in content front matter:
+       faq:
+         - q: "Сколько лет Роману Мелдерсу?"
+           a: "Роману Мелдерсу 13 лет..."
+   ─────────────────────────────────────────────────────────────────────── */}}
+
+{{- with .Params.faq }}
+<section class="mx-auto my-12 max-w-4xl px-4" aria-labelledby="faq-heading">
+  <h2 id="faq-heading" class="text-3xl font-bold mb-6">
+    {{ if eq $.Language.Lang "en" }}Frequently asked questions{{ else }}Частые вопросы{{ end }}
+  </h2>
+  <div class="divide-y divide-gray-200 border-t border-gray-200">
+    {{- range . }}
+    <details class="group py-4">
+      <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-gray-900 list-none">
+        <span>{{ .q }}</span>
+        <svg class="ml-4 h-5 w-5 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </summary>
+      <div class="mt-3 text-gray-700 leading-relaxed">{{ .a | markdownify }}</div>
+    </details>
+    {{- end }}
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $item := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.a | markdownify | plainify | jsonify }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}

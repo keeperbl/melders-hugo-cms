@@ -1,0 +1,33 @@
+{{/* Language-aware slide data */}}
+{{ $slides := .Site.Data.slide }}
+{{ if eq .Language.Lang "en" }}{{ with .Site.Data.en.slide }}{{ $slides = . }}{{ end }}{{ end }}
+
+<div class="splide" role="group" aria-label="{{ if eq .Language.Lang "en" }}Photo gallery{{ else }}Фотогалерея{{ end }}">
+    <div class="splide__track">
+        <ul class="splide__list">
+            {{ range $i, $slide := $slides }}
+            <li class="splide__slide">
+                {{ if eq $i 0 }}
+                <img src="{{ $slide.image }}" alt="{{ $slide.alt | default $slide.title }}" fetchpriority="high" decoding="async">
+                {{ else }}
+                <img src="{{ $slide.image }}" alt="{{ $slide.alt | default $slide.title }}" loading="lazy" decoding="async">
+                {{ end }}
+                <div class="s-fade-txt">
+                    {{/* Only the first slide carries the page H1 — the rest are decorative captions */}}
+                    {{ if eq $i 0 }}
+                    <h1 class="text-4xl font-medium {{ or $slide.color "text-white" }}">{{ $slide.title }}</h1>
+                    {{ if $slide.subtitle }}
+                    <p class="text-lg mt-2 {{ or $slide.color "text-white" }} opacity-90">{{ $slide.subtitle }}</p>
+                    {{ end }}
+                    {{ else }}
+                    <p class="text-4xl font-medium {{ or $slide.color "text-white" }}" role="presentation">{{ $slide.title }}</p>
+                    {{ if $slide.subtitle }}
+                    <p class="text-lg mt-2 {{ or $slide.color "text-white" }} opacity-90">{{ $slide.subtitle }}</p>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+</div>

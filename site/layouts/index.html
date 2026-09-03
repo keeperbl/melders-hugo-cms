@@ -25,6 +25,8 @@
         {{- partial "recent.html" . -}}
     </div>
     {{ end }}
+    {{/* GEO: FAQ block with FAQPage schema, rendered when front matter has `faq:` */}}
+    {{- partial "faq.html" . -}}
 {{ end }}
 
 {{ define "scripts" }}

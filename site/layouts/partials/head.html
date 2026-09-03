@@ -2,7 +2,18 @@
 <meta charset="utf-8">
 
 {{/* ─── Title ─── */}}
-<title>{{- if .IsHome -}}{{ site.Title }} — Официальный сайт{{- else -}}{{ .Title }} | {{ site.Title }}{{- end -}}</title>
+{{/* SEO: keep under ~60 chars — skip the site-name suffix when the page title
+     already contains the actor's name, otherwise Google truncates it */}}
+{{- $homeSuffix := cond (eq .Language.Lang "en") "Official site" "Официальный сайт" -}}
+{{- $pageTitle := "" -}}
+{{- if .IsHome -}}
+  {{- $pageTitle = printf "%s — %s" site.Title $homeSuffix -}}
+{{- else if or (in .Title "Мелдерс") (in .Title "Melders") -}}
+  {{- $pageTitle = .Title -}}
+{{- else -}}
+  {{- $pageTitle = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+<title>{{ $pageTitle }}</title>
 
 {{/* ─── Meta base ─── */}}
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -23,6 +34,16 @@
 
 {{/* ─── Canonical URL ─── */}}
 <link rel="canonical" href="{{ .Permalink }}">
+
+{{/* ─── Hreflang: links RU and EN versions so search engines don't treat them as duplicates ─── */}}
+{{- if .IsTranslated }}
+{{- range .AllTranslations }}
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{- end }}
+{{- range .AllTranslations }}{{ if eq .Language.Lang "ru" }}
+<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{- end }}{{ end }}
+{{- end }}
 
 {{/* ─── Open Graph ─── */}}
 {{- $ogTitle := .Title -}}
@@ -145,8 +166,9 @@ ym(78032920,'init',{clickmap:true,referrer:document.referrer,url:location.href,a
   ]
 }
 </script>
-{{- else if eq .Section "post" }}
-{{/* TVSeries / Movie schema с именем персонажа — даёт rich snippets в Google */}}
+{{- else if and .IsPage (eq .Section "post") }}
+{{/* TVSeries / Movie schema с именем персонажа — даёт rich snippets в Google.
+     .IsPage guard: list pages (/post/) must not emit this — they aren't a series */}}
 {{- $schemaType := .Params.schema_type | default "TVSeries" -}}
 <script type="application/ld+json">
 {
