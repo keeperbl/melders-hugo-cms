@@ -31,7 +31,6 @@ schema_type = "Movie"
   <img src="/images/ferrero.JPG" alt="Реклама" />
 </div>
 
-
 ## Ссылка на ролик в ютубе:
 
 {{< youtube sORIexzZNI8 >}}

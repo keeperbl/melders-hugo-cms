@@ -11,13 +11,11 @@ role = "главная роль"
 schema_type = "Movie"
 +++
 
-
 ## Студия
 
 ```
 Рекламу снимала студия "непомнюкакая" 
 ```
-
 
 ## Реклама
 
@@ -38,7 +36,6 @@ schema_type = "Movie"
 #<div class="full-width">
 #  <iframe src="https://www.youtube.com/embed/1l080ufvDdg" class="w-full h-screen"></iframe>
 #</div>
-
 
 ## Ссылка на ролик в ютубе:
 

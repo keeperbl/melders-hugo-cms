@@ -8,9 +8,6 @@ tags:
   - сериал
   - кино
   - НТВ
-  - кино
-  - НТВ
-  - сериал
   - youtube
 role: "эпизодическая роль"
 schema_type: "TVSeries"
