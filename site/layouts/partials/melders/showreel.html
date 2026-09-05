@@ -1,0 +1,19 @@
+{{ $d := .Site.Data.landing }}
+{{ $href := or $d.showreel_url "#works" }}
+<section id="showreel" style="padding: clamp(60px, 8vw, 100px) clamp(20px, 4vw, 48px);">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(24px, 4vw, 56px); align-items: center;">
+    <div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8B96FF;">{{ T "showreel_label" }}</div>
+      <h2 style="margin: 14px 0 16px; font-family: 'Russo One', sans-serif; font-weight: 400; font-size: clamp(30px, 3.6vw, 52px); line-height: 1.04; letter-spacing: -.02em; text-transform: uppercase;">{{ T "showreel_h1" }}<br>{{ T "showreel_h2" }}</h2>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,.65); max-width: 420px;">{{ T "showreel_lead" }}</p>
+      <a href="{{ $href }}" style="display: inline-flex; align-items: center; gap: 12px; padding: 17px 30px; border: 1px solid rgba(255,255,255,.35); color: #FFFFFF; font-size: 15px; font-weight: 500;">{{ T "showreel_cta" }}</a>
+    </div>
+    <a href="{{ $href }}" style="position: relative; display: block; aspect-ratio: 16 / 9; overflow: hidden; background: #0D0D12;">
+      <img src="{{ $d.showreel_poster | relURL }}" alt="{{ T "showreel_label" }}" loading="lazy" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(.72);">
+      <span style="position: absolute; inset: 0; margin: auto; width: 96px; height: 96px; border-radius: 50%; background: #1B2AFF; display: grid; place-items: center; box-shadow: 0 20px 60px rgba(27,42,255,.5);">
+        <span style="width: 0; height: 0; border-left: 24px solid #FFFFFF; border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 7px;"></span>
+      </span>
+      <span style="position: absolute; left: 18px; bottom: 16px; padding: 7px 14px; background: rgba(8,8,10,.75); font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;">{{ $d.showreel_duration }}</span>
+    </a>
+  </div>
+</section>

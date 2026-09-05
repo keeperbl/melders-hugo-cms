@@ -1,0 +1,12 @@
+<section id="contacts" style="padding: clamp(56px, 7vw, 90px) clamp(20px, 4vw, 48px); background: #1B2AFF; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 36px;">
+  <div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.78);">{{ T "contacts_label" }}</div>
+    <div style="font-family: 'Russo One', sans-serif; font-size: clamp(34px, 4.4vw, 62px); line-height: 1.04; letter-spacing: -.02em; margin-top: 14px;">{{ T "contacts_h1" }}<br>{{ T "contacts_h2" }}</div>
+    <p style="margin: 20px 0 0; max-width: 460px; font-size: 16px; line-height: 1.6; color: rgba(255,255,255,.8);">{{ T "contacts_lead" }}</p>
+  </div>
+  <div style="display: grid; gap: 10px; font-size: clamp(17px, 1.8vw, 22px); font-weight: 600;">
+    {{ range .Site.Data.landing.contacts }}
+    <a href="{{ .url | safeURL }}" style="color: #FFFFFF;">{{ .text }}</a>
+    {{ end }}
+  </div>
+</section>
