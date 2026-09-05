@@ -1,0 +1,8 @@
+<section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); background: #1B2AFF;">
+  {{ range $i, $s := .Site.Data.landing.stats }}
+  <div style="padding: clamp(26px, 3vw, 38px) clamp(18px, 2vw, 32px); {{ if lt $i 3 }}border-right: 1px solid rgba(255,255,255,.22);{{ end }}">
+    <div data-count="{{ $s.value }}" data-suffix="{{ $s.suffix }}" style="font-family: 'Russo One', sans-serif; font-size: clamp(40px, 5vw, 70px); line-height: 1;">{{ $s.value }}{{ $s.suffix }}</div>
+    <div style="margin-top: 8px; font-size: 13px; font-weight: 500; color: rgba(255,255,255,.82);">{{ T $s.label }}</div>
+  </div>
+  {{ end }}
+</section>

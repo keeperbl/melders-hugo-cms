@@ -1,0 +1,28 @@
+{{ $d := .Site.Data.landing }}
+<section id="top" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); min-height: 100svh;">
+  <div style="container-type: inline-size; padding: clamp(96px, 12vh, 150px) clamp(20px, 4vw, 48px) 44px; display: flex; flex-direction: column; justify-content: space-between;">
+    <div>
+      <div style="display: inline-flex; align-items: center; gap: 10px; padding: 9px 17px; border-radius: 999px; background: rgba(27,42,255,.18); border: 1px solid rgba(27,42,255,.55); font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #8B96FF; animation: m-fadein .8s ease .1s both;">
+        <span style="width: 7px; height: 7px; border-radius: 50%; background: #1B2AFF; box-shadow: 0 0 0 4px rgba(27,42,255,.25);"></span>
+        {{ T "hero_badge" }}
+      </div>
+      <h1 style="margin: clamp(20px, 3vw, 30px) 0 0; font-family: 'Russo One', sans-serif; font-weight: 400; font-size: clamp(44px, 15.5cqw, 148px); line-height: .9; letter-spacing: -.03em; text-transform: uppercase;">
+        <span style="display: block; overflow: hidden;"><span style="display: inline-block; animation: m-rise 1s cubic-bezier(.2,.8,.2,1) .18s both;">{{ T "hero_first" }}</span></span>
+        <span style="display: block; overflow: hidden;"><span style="display: inline-block; color: #1B2AFF; -webkit-text-stroke: 2px #FFFFFF; animation: m-rise 1s cubic-bezier(.2,.8,.2,1) .33s both;">{{ T "hero_last" }}</span></span>
+      </h1>
+      <p style="margin: clamp(22px, 3vw, 30px) 0 0; max-width: 500px; font-size: clamp(16px, 1.4vw, 19px); line-height: 1.55; color: rgba(255,255,255,.68); text-wrap: pretty; animation: m-fadein 1s ease .8s both;">{{ T "hero_lead" }}</p>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 44px; animation: m-fadein 1s ease 1s both;">
+      <a href="#contacts" style="padding: 20px 36px; background: #1B2AFF; color: #FFFFFF; font-family: 'Russo One', sans-serif; font-size: 15px; letter-spacing: .06em; text-transform: uppercase;">{{ T "hero_cta_agent" }}</a>
+      <a href="{{ $d.pdf | relURL }}" style="padding: 20px 32px; border: 1px solid rgba(255,255,255,.35); color: #FFFFFF; font-size: 15px; font-weight: 500;">{{ T "hero_cta_pdf" }}</a>
+      <div style="margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 7px; animation: m-hint 2.4s ease-in-out infinite;">
+        <span style="font-size: 10px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: rgba(255,255,255,.5);">{{ T "hero_scroll" }}</span>
+        <span style="width: 1px; height: 26px; background: linear-gradient(180deg, rgba(255,255,255,.6), transparent);"></span>
+      </div>
+    </div>
+  </div>
+  <div style="position: relative; overflow: hidden; min-height: 420px;">
+    <img src="{{ $d.hero_image | relURL }}" alt="{{ $d.hero_image_alt }}" fetchpriority="high" decoding="async" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; animation: m-kb 26s ease-in-out infinite alternate;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(90deg, #08080A, rgba(8,8,10,.05) 45%, rgba(27,42,255,.3));"></div>
+  </div>
+</section>

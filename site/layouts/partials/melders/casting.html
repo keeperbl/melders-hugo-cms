@@ -1,0 +1,26 @@
+{{ $c := .Site.Data.casting }}
+{{ if eq .Language.Lang "en" }}{{ with .Site.Data.en.casting }}{{ $c = . }}{{ end }}{{ end }}
+<section id="casting" style="padding: clamp(50px, 6vw, 80px) clamp(20px, 4vw, 48px); border-top: 1px solid rgba(255,255,255,.12); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(30px, 5vw, 64px);">
+  <div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8B96FF;">{{ T "casting_label" }}</div>
+    <div style="display: grid; margin-top: 26px;">
+      {{ range $c.params }}
+      <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,.12);">
+        <span style="font-size: 15px; color: rgba(255,255,255,.55);">{{ .key }}</span>
+        <span style="font-family: 'Russo One', sans-serif; font-weight: 400; font-size: 22px; text-align: right;">{{ .value }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8B96FF;">{{ T "skills_label" }}</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 9px; margin: 24px 0 40px;">
+      {{ range $c.skills }}
+      <span data-hover-lift style="padding: 11px 19px; border: 1px solid rgba(255,255,255,.28); font-size: 15px; transition: background .25s ease, transform .25s cubic-bezier(.2,.8,.2,1);">{{ . }}</span>
+      {{ end }}
+    </div>
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .22em; text-transform: uppercase; color: #8B96FF;">{{ T "genres_label" }}</div>
+    <p style="margin: 20px 0 0; font-size: 17px; line-height: 1.65; color: rgba(255,255,255,.72);">{{ $c.genres }}</p>
+    <a href="{{ .Site.Data.landing.pdf | relURL }}" style="display: inline-flex; align-items: center; gap: 12px; margin-top: 34px; padding: 18px 30px; background: rgba(27,42,255,.16); border: 1px solid rgba(27,42,255,.6); color: #FFFFFF; font-size: 15px; font-weight: 600;">{{ T "casting_pdf" }}</a>
+  </div>
+</section>

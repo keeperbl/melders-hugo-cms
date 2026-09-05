@@ -1,0 +1,88 @@
+# Home page landing
+[nav_works]
+other = "Work"
+[nav_showreel]
+other = "Showreel"
+[nav_casting]
+other = "Casting"
+[nav_photo]
+other = "Photos"
+[nav_contacts]
+other = "Contact"
+[nav_cta]
+other = "Casting →"
+
+[hero_badge]
+other = "13 years old · St. Petersburg · available for auditions"
+[hero_first]
+other = "Roman"
+[hero_last]
+other = "Melders"
+[hero_lead]
+other = "Film and television actor based in St. Petersburg. Over 30 projects: series, feature and short films, commercials, Marvel dubbing. Picks up new material fast and handles long shooting days."
+[hero_cta_agent]
+other = "Contact the agent"
+[hero_cta_pdf]
+other = "Casting PDF ↓"
+[hero_scroll]
+other = "Scroll"
+
+[stat_projects]
+other = "projects since 2019"
+[stat_roles]
+other = "roles in film and series"
+[stat_leads]
+other = "lead roles on STS channel"
+[stat_dubbing]
+other = "dubbing credits: Eternals, Dr. Brain"
+
+[photo_heading]
+other = "Stills & photos"
+[photo_all]
+other = "All photos →"
+
+[showreel_label]
+other = "Showreel"
+[showreel_h1]
+other = "Roles reel"
+[showreel_h2]
+other = "in 90 seconds"
+[showreel_lead]
+other = "Scenes from “Who's Faster?”, “Catastrophe”, “Fear over the Neva” and short films. Timecoded by scene for casting directors."
+[showreel_cta]
+other = "Watch the showreel"
+
+[works_heading]
+other = "All work"
+[works_hint]
+other = "hover a row to see a still"
+[filter_all]
+other = "All"
+[filter_series]
+other = "Series"
+[filter_film]
+other = "Film"
+[filter_short]
+other = "Short film"
+[filter_dubbing]
+other = "Dubbing"
+[filter_ad]
+other = "Commercial"
+
+[casting_label]
+other = "Casting parameters"
+[skills_label]
+other = "Skills"
+[genres_label]
+other = "Genre range"
+[casting_pdf]
+other = "Download the casting PDF — photos, parameters, filmography"
+
+[contacts_label]
+other = "Casting & bookings"
+[contacts_h1]
+other = "Contact the agent"
+[contacts_h2]
+other = "Irina Melders"
+[contacts_lead]
+other = "Roman is open to auditions, episodic and long-term roles in film, series, commercials and dubbing."
