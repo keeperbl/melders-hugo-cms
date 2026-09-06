@@ -1,14 +1,7 @@
-{{ define "meta_tags" }}
-    <meta name="description" content="{{ .Param "homepage_meta_tags.meta_og_description" }}" />
-    <meta property="og:title" content="{{ .Param "homepage_meta_tags.meta_og_title" }}" />
-    <meta property="og:type" content="{{ .Param "homepage_meta_tags.meta_og_type" }}" />
-    <meta property="og:url" content="{{ .Param "homepage_meta_tags.meta_og_url" }}" />
-    <meta property="og:image" content="{{ .Param "homepage_meta_tags.meta_og_image" }}" />
-    <meta property="og:description" content="{{ .Param "homepage_meta_tags.meta_og_description" }}" />
-    <meta name="twitter:card" content="{{ .Param "homepage_meta_tags.meta_twitter_card" }}" />
-    <meta name="twitter:site" content="{{ .Param "homepage_meta_tags.meta_twitter_site" }}" />
-    <meta name="twitter:creator" content="{{ .Param "homepage_meta_tags.meta_twitter_creator" }}" />
-{{ end }}
+{{/* meta_tags block removed: partials/head.html already emits the homepage
+     description, og: and twitter: tags, and does it language-aware with the
+     age substitution applied. Keeping both produced duplicate tags and leaked
+     the raw age placeholder into the second copy. */}}
 
 {{ define "main" }}
     {{- partial "alert.html" . -}}
