@@ -30,6 +30,10 @@
 {{- else if .Summary -}}
   {{- $desc = .Summary | truncate 160 -}}
 {{- end -}}
+{{/* Age placeholder: front matter and config cannot call partials, so
+     descriptions carry {{AGE}} and it is resolved here at build time */}}
+{{- $ageStr := cond (eq .Language.Lang "en") (printf "%d" (partial "age.html" .)) (partial "age-ru.html" .) -}}
+{{- $desc = replace $desc "{{AGE}}" $ageStr -}}
 {{- if $desc -}}
 <meta name="description" content="{{ $desc }}">
 {{- end -}}

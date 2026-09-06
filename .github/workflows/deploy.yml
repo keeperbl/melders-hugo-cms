@@ -5,6 +5,10 @@ on:
     branches:
       - master
   workflow_dispatch:
+  # Rebuild nightly so the build-time age (partials/age.html) stays current
+  # between pushes — otherwise it freezes at whatever it was on the last deploy.
+  schedule:
+    - cron: '17 3 * * *'
 
 permissions:
   contents: read

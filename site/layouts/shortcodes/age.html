@@ -1,0 +1,12 @@
+{{- /* {{< age >}} -> 14 ; {{< age words >}} -> "14 лет" / "14 years old" */ -}}
+{{- if .IsNamedParams -}}
+  {{- partial "age.html" . -}}
+{{- else if and (gt (len .Params) 0) (eq (.Get 0) "words") -}}
+  {{- if eq .Page.Language.Lang "en" -}}
+    {{- printf "%d years old" (partial "age.html" .) -}}
+  {{- else -}}
+    {{- partial "age-ru.html" . -}}
+  {{- end -}}
+{{- else -}}
+  {{- partial "age.html" . -}}
+{{- end -}}

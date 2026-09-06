@@ -10,7 +10,7 @@ hideMetadata: "true"
 </div>
 <div style="flex:1;min-width:260px;">
 <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:0.25rem;">Роман Мелдерс</h2>
-<p style="color:#6b7280;margin-bottom:1.5rem;">Актёр · 13 лет · Санкт-Петербург / Москва</p>
+<p style="color:#6b7280;margin-bottom:1.5rem;">Актёр · {{< age words >}} · Санкт-Петербург / Москва</p>
 <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem;">
 <p style="font-weight:600;margin-bottom:0.75rem;color:#374151;">📋 Представитель: Ирина Мелдерс</p>
 <p style="margin:0.4rem 0;">📱 <a href="https://t.me/IrinaMelders" style="color:#2563eb;">@IrinaMelders</a></p>

@@ -8,7 +8,7 @@ a = "Roman Melders is a Russian child actor working in film, television and voic
 
 [[faq]]
 q = "How old is Roman Melders?"
-a = "Roman Melders is 13 years old. He was born on September 6, 2012 in Saint Petersburg, Russia."
+a = "Roman Melders is {{AGE}} years old. He was born on September 6, 2012 in Saint Petersburg, Russia."
 
 [[faq]]
 q = "Who plays Gera in the TV series \"Who's Faster?\""

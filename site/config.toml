@@ -25,6 +25,8 @@ enableRobotsTXT = true
   googleFonts = true
   yandexMetrika = "78032920"
   yandexVerification = "78032920"
+  # Single source of truth for the age shown across the site (see partials/age.html)
+  birthDate = "2012-09-06"
 
   [params.logo]
 
@@ -35,12 +37,12 @@ enableRobotsTXT = true
     bootstrap = false
 
   [params.homepage_meta_tags]
-    meta_description = "Роман Мелдерс — российский актёр, 13 лет, Санкт-Петербург. Фильмография, фото, контакты. Снялся в сериалах Котострофа, Кто быстрее, Скорая помощь."
+    meta_description = "Роман Мелдерс — российский актёр, {{AGE}}, Санкт-Петербург. Фильмография, фото, контакты. Снялся в сериалах Котострофа, Кто быстрее, Скорая помощь."
     meta_og_title = "Роман Мелдерс — актёр"
     meta_og_type = "website"
     meta_og_url = "https://www.melders.ru"
     meta_og_image = "https://www.melders.ru/images/og_image_v2.jpg"
-    meta_og_description = "Роман Мелдерс — российский актёр, 13 лет, Санкт-Петербург. Фильмография, фото, контакты."
+    meta_og_description = "Роман Мелдерс — российский актёр, {{AGE}}, Санкт-Петербург. Фильмография, фото, контакты."
     meta_twitter_card = "summary_large_image"
 
 # ── Russian language ──────────────────────────────────────────────────────────
@@ -116,12 +118,12 @@ enableRobotsTXT = true
     name = "Roman Melders"
 
   [languages.en.params.homepage_meta_tags]
-    meta_description = "Roman Melders — Russian actor, 13, Saint Petersburg. Filmography, photos, contacts. Starred in Kotostrofa, Who's Faster, Ambulance."
+    meta_description = "Roman Melders — Russian actor, {{AGE}}, Saint Petersburg. Filmography, photos, contacts. Starred in Kotostrofa, Who's Faster, Ambulance."
     meta_og_title = "Roman Melders — Actor"
     meta_og_type = "website"
     meta_og_url = "https://www.melders.ru/en/"
     meta_og_image = "https://www.melders.ru/images/og_image_v2.jpg"
-    meta_og_description = "Roman Melders — Russian actor, 13, Saint Petersburg. Filmography, photos, contacts."
+    meta_og_description = "Roman Melders — Russian actor, {{AGE}}, Saint Petersburg. Filmography, photos, contacts."
     meta_twitter_card = "summary_large_image"
 
   [[languages.en.menus.main]]

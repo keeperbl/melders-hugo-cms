@@ -6,9 +6,10 @@
      Usage in content front matter:
        faq:
          - q: "Сколько лет Роману Мелдерсу?"
-           a: "Роману Мелдерсу 13 лет..."
+           a: "Роману Мелдерсу {{AGE}}..."
    ─────────────────────────────────────────────────────────────────────── */}}
 
+{{- $ageStr := cond (eq .Language.Lang "en") (printf "%d" (partial "age.html" .)) (partial "age-ru.html" .) -}}
 {{- with .Params.faq }}
 <section class="mx-auto my-12 max-w-4xl px-4" aria-labelledby="faq-heading">
   <h2 id="faq-heading" class="text-3xl font-bold mb-6">
@@ -18,12 +19,12 @@
     {{- range . }}
     <details class="group py-4">
       <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-gray-900 list-none">
-        <span>{{ .q }}</span>
+        <span>{{ replace .q "{{AGE}}" $ageStr }}</span>
         <svg class="ml-4 h-5 w-5 shrink-0 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
         </svg>
       </summary>
-      <div class="mt-3 text-gray-700 leading-relaxed">{{ .a | markdownify }}</div>
+      <div class="mt-3 text-gray-700 leading-relaxed">{{ replace .a "{{AGE}}" $ageStr | markdownify }}</div>
     </details>
     {{- end }}
   </div>
@@ -37,10 +38,10 @@
     {{- range $i, $item := . }}{{ if $i }},{{ end }}
     {
       "@type": "Question",
-      "name": {{ $item.q | jsonify | safeJS }},
+      "name": {{ replace $item.q "{{AGE}}" $ageStr | jsonify | safeJS }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $item.a | markdownify | plainify | jsonify | safeJS }}
+        "text": {{ replace $item.a "{{AGE}}" $ageStr | markdownify | plainify | jsonify | safeJS }}
       }
     }
     {{- end }}

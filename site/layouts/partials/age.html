@@ -1,0 +1,20 @@
+{{- /* ─── Actor's current age ──────────────────────────────────────────────
+     Returns the age in years, computed at build time from site.Params.birthDate.
+
+     Hardcoding the age meant it silently went stale on every birthday — it sat
+     at "13" on the day Roman turned 14. Paired with the nightly rebuild in
+     .github/workflows/deploy.yml so the built site never drifts.
+
+     Usage:
+       {{ partial "age.html" . }}            -> 14
+       {{ partial "age-ru.html" . }}         -> "14 лет" (declined)
+       {{< age >}} / {{< age words >}}       -> in content bodies
+       {{AGE}}                               -> placeholder in front matter
+   ────────────────────────────────────────────────────────────────────── */ -}}
+{{- $bd := time.AsTime (site.Params.birthDate | default "2012-09-06") -}}
+{{- $now := now -}}
+{{- $age := sub $now.Year $bd.Year -}}
+{{- if or (lt (int $now.Month) (int $bd.Month)) (and (eq (int $now.Month) (int $bd.Month)) (lt $now.Day $bd.Day)) -}}
+  {{- $age = sub $age 1 -}}
+{{- end -}}
+{{- return $age -}}
