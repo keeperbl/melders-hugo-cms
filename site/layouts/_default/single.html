@@ -1,35 +1,8 @@
-{{ define "meta_tags" }}
-
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:title" content="{{ .Title }}">
-
-{{ if .Params.image }}
-{{ with .Params.image }}
-<meta property="og:image" content="{{ . | absURL }}">
-{{ end }}
-{{ else }}
-<meta property="og:image" content="{{ .Site.Params.homepage_meta_tags.meta_og_image | absURL }}">
-{{ end }}
-
-{{- if .Description }}
-<meta name="description" content="{{ .Description }}" />
-<meta property="og:description" content="{{ .Description }}" />
-<meta property="twitter:description" content="{{ .Description }}" />
-{{- else if .Summary }}
-<meta name="description" content="{{ .Summary }}" />
-<meta property="og:description" content="{{ .Summary }}" />
-<meta property="twitter:description" content="{{ .Summary }}" />
-{{- else if .Site.Params.description }}
-<meta name="description" content="{{ .Site.Params.description }}" />
-<meta property="og:description" content="{{ .Site.Params.description }}" />
-<meta property="twitter:description" content="{{ .Site.Params.description }}" />
-{{- end }}
-
-{{ end }}
+{{/* The theme defines a "meta_tags" block here that re-emitted description,
+     og: and twitter: tags already produced by partials/head.html. That gave
+     every page two of each, and the duplicate bypassed the age-placeholder
+     substitution so it shipped the raw token. head.html is the single source
+     for meta tags; the block is intentionally left undefined. */}}
 
 {{ define "main" }}
 <div class="mx-auto my-10 max-w-4xl px-4 sm:px-6 lg:px-8">
