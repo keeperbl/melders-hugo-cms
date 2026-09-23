@@ -24,7 +24,7 @@ a = "Roman Melders has appeared in \"Who's Faster?\" (STS, 2024, leading role as
 
 [[faq]]
 q = "How tall is Roman Melders?"
-a = "Roman Melders is 161 cm tall. He has grey-blue eyes and light brown hair. These measurements are current as of 2026."
+a = "Roman Melders is 165 cm tall. He has grey-blue eyes and light brown hair. These measurements are current as of 2026."
 
 [[faq]]
 q = "How can I book Roman Melders for a casting?"
@@ -35,4 +35,4 @@ a = "For auditions, casting and filming enquiries, contact the actor's producer 
 
 He is best known for leading roles in the series **"Who's Faster?"** (STS, 2024, co-starring Dmitry Nagiev) and **"Kotostrofa"** (STS, 2024, with Mikhail Trukhin and Pavel Derevyanko). He has also appeared in "Fear Over the Neva", "Ambulance", "Hands Up!", "Black Cloud", "Mentozavry" and "The Puppeteer".
 
-Roman contributed voice work to the Marvel film "Eternals". He is 161 cm tall, with grey-blue eyes and light brown hair. Available for auditions and filming in Moscow, Saint Petersburg and other Russian cities. For casting enquiries, see the [contacts page](/en/contacts/).
+Roman contributed voice work to the Marvel film "Eternals". He is 165 cm tall, with grey-blue eyes and light brown hair. Available for auditions and filming in Moscow, Saint Petersburg and other Russian cities. For casting enquiries, see the [contacts page](/en/contacts/).

@@ -13,7 +13,7 @@ Born on September 6, 2012, in Saint Petersburg.
 
 **Physical parameters:**
 
-Height: 161 cm · Eyes: Grey-blue · Hair: Light brown
+Height: 165 cm · Eyes: Grey-blue · Hair: Light brown
 
 **Hobbies and interests:** horse riding, skiing, ballroom dancing, karting, football.
 
