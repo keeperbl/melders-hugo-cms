@@ -8,8 +8,9 @@
   },
   {
     "title": "Шоурил",
-    "description": "Нарезка роликов из фильмов",
-    "icon": "bi bi-camera-video"
+    "description": "Нарезка сцен из сериалов и фильмов — 2 минуты.",
+    "icon": "bi bi-camera-video",
+    "link": "/showreel/"
   },
   {
     "title": "Связаться",

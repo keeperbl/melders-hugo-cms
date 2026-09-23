@@ -75,20 +75,25 @@ enableRobotsTXT = true
     url = "/casting/"
     weight = 3
   [[languages.ru.menus.main]]
+    identifier = "showreel"
+    name = "Шоурил"
+    url = "/showreel/"
+    weight = 4
+  [[languages.ru.menus.main]]
     identifier = "regalies"
     name = "Регалии"
     url = "/regalies/"
-    weight = 4
+    weight = 5
   [[languages.ru.menus.main]]
     identifier = "photo"
     name = "Фото"
     url = "/photo/"
-    weight = 5
+    weight = 6
   [[languages.ru.menus.main]]
     identifier = "contacts"
     name = "Контакты"
     url = "/contacts/"
-    weight = 6
+    weight = 7
 
   [[languages.ru.menus.footer]]
     name = "ВКонтакте"
