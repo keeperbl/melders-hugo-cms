@@ -6,7 +6,7 @@ hideMetadata: "true"
 
 <div style="display:flex;gap:2.5rem;align-items:flex-start;flex-wrap:wrap;margin-top:1rem;">
 <div style="flex:0 0 auto;width:280px;max-width:100%;">
-<img src="/images/Роман5.JPG" alt="Роман Мелдерс" style="width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);object-fit:cover;object-position:left center;height:360px;">
+<img src="/images/roman_2026.jpg" alt="Роман Мелдерс" style="width:100%;border-radius:12px;box-shadow:0 4px 20px rgba(0,0,0,0.15);object-fit:cover;object-position:center 15%;height:360px;">
 </div>
 <div style="flex:1;min-width:260px;">
 <h2 style="font-size:1.5rem;font-weight:700;margin-bottom:0.25rem;">Роман Мелдерс</h2>
@@ -25,9 +25,11 @@ hideMetadata: "true"
 <a href="https://kinolift.ru/16742" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #e5e7eb;border-radius:8px;color:#111827;text-decoration:none;">🎥 КиноЛифт</a>
 <a href="https://www.kinopoisk.ru/name/6624997/" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #e5e7eb;border-radius:8px;color:#111827;text-decoration:none;">⭐ КиноПоиск</a>
 </div>
+<a href="https://disk.yandex.ru/i/sCvADC2qiV-bHg" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #c8860a;background:#fffbf2;border-radius:8px;color:#111827;text-decoration:none;font-weight:600;">🗂 Визитка — сентябрь 2026</a>
 <a href="https://disk.yandex.ru/i/SSgsDxAoMSi44w" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #e5e7eb;border-radius:8px;color:#111827;text-decoration:none;">🗂 Визитка (стр. 1)</a>
 <a href="https://disk.yandex.ru/i/WkPVh_0s4gMfQg" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #e5e7eb;border-radius:8px;color:#111827;text-decoration:none;">🗂 Визитка (стр. 2)</a>
 <a href="https://disk.yandex.ru/i/5_fxVocCjNCKNw" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #e5e7eb;border-radius:8px;color:#111827;text-decoration:none;">🗂 Визитка (стр. 3)</a>
+<a href="https://disk.yandex.ru/d/TURjbdtpoDzS1Q" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #c8860a;background:#fffbf2;border-radius:8px;color:#111827;text-decoration:none;font-weight:600;">☁️ Я.Диск — сентябрь 2026</a>
 <a href="https://disk.yandex.ru/d/-wl7PIkdqCusTQ" target="_blank" style="display:flex;align-items:center;gap:0.75rem;padding:0.6rem 1rem;border:1px solid #e5e7eb;border-radius:8px;color:#111827;text-decoration:none;">☁️ Я.Диск — фото и видео</a>
 </div>
 </div>
