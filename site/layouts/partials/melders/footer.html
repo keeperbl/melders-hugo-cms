@@ -1,0 +1,8 @@
+<footer style="padding: 30px clamp(20px, 4vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 13px; color: rgba(255,255,255,.45);">
+  <span>&copy; {{ .Site.Title }}, {{ now.Year }}</span>
+  <span style="display: flex; flex-wrap: wrap; gap: 20px;">
+    {{ range .Site.Menus.footer }}
+    <a href="{{ .URL }}" style="color: rgba(255,255,255,.45);">{{ .Name }}</a>
+    {{ end }}
+  </span>
+</footer>

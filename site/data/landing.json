@@ -1,0 +1,60 @@
+{
+  "hero_image": "/images/Роман3.JPG",
+  "hero_image_alt": "Роман Мелдерс — актёр из Санкт-Петербурга",
+  "pdf": "/melders_card_2026.pdf",
+  "showreel_url": "",
+  "showreel_poster": "/images/Роман5.JPG",
+  "showreel_duration": "01:30 · 2026",
+  "strip": [
+    "/images/Роман0.JPG",
+    "/images/Роман2.JPG",
+    "/images/Роман5.JPG",
+    "/images/IMG_6984.JPG",
+    "/images/Роман8.JPG",
+    "/images/Роман91.JPG"
+  ],
+  "stats": [
+    {
+      "value": 30,
+      "suffix": "+",
+      "label": "stat_projects"
+    },
+    {
+      "value": 26,
+      "suffix": "",
+      "label": "stat_roles"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": "stat_leads"
+    },
+    {
+      "value": 2,
+      "suffix": "",
+      "label": "stat_dubbing"
+    }
+  ],
+  "contacts": [
+    {
+      "text": "+7 911 777 41 42",
+      "url": "tel:+79117774142"
+    },
+    {
+      "text": "roman@melders.ru",
+      "url": "mailto:roman@melders.ru"
+    },
+    {
+      "text": "t.me/MeldersR",
+      "url": "https://t.me/MeldersR"
+    },
+    {
+      "text": "vk.ru/romanmelders",
+      "url": "https://vk.ru/romanmelders"
+    },
+    {
+      "text": "kinolift.ru/16742",
+      "url": "https://kinolift.ru/16742"
+    }
+  ]
+}

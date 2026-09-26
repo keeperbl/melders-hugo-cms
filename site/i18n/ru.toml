@@ -1,0 +1,88 @@
+# Лендинг главной страницы
+[nav_works]
+other = "Работы"
+[nav_showreel]
+other = "Шоурил"
+[nav_casting]
+other = "Кастинг"
+[nav_photo]
+other = "Фото"
+[nav_contacts]
+other = "Контакты"
+[nav_cta]
+other = "Кастинг →"
+
+[hero_badge]
+other = "13 лет · СПб · свободен для проб"
+[hero_first]
+other = "Роман"
+[hero_last]
+other = "Мелдерс"
+[hero_lead]
+other = "Актёр кино и телевидения из Санкт-Петербурга. Более 30 проектов: сериалы, художественные и короткометражные фильмы, реклама, дубляж Marvel. Быстро включается в новые съёмки и готов к переработкам на сменах."
+[hero_cta_agent]
+other = "Связаться с агентом"
+[hero_cta_pdf]
+other = "Анкета PDF ↓"
+[hero_scroll]
+other = "Ниже"
+
+[stat_projects]
+other = "проектов с 2019 года"
+[stat_roles]
+other = "ролей в кино и сериалах"
+[stat_leads]
+other = "главные роли на СТС"
+[stat_dubbing]
+other = "дубляжа: Eternals, Dr. Brain"
+
+[photo_heading]
+other = "Кадры и фото"
+[photo_all]
+other = "Все фото →"
+
+[showreel_label]
+other = "Шоурил"
+[showreel_h1]
+other = "Нарезка ролей"
+[showreel_h2]
+other = "за 90 секунд"
+[showreel_lead]
+other = "Фрагменты из «Кто быстрее?», «Котострофы», «Страха над Невой» и короткого метра. Для кастинг-директоров — с таймкодами по сценам."
+[showreel_cta]
+other = "Смотреть шоурил"
+
+[works_heading]
+other = "Все работы"
+[works_hint]
+other = "наведите на строку, чтобы увидеть кадр"
+[filter_all]
+other = "Все"
+[filter_series]
+other = "Сериалы"
+[filter_film]
+other = "Кино"
+[filter_short]
+other = "Короткий метр"
+[filter_dubbing]
+other = "Дубляж"
+[filter_ad]
+other = "Реклама"
+
+[casting_label]
+other = "Параметры для кастинга"
+[skills_label]
+other = "Навыки"
+[genres_label]
+other = "Жанровый диапазон"
+[casting_pdf]
+other = "Скачать анкету PDF — фото, параметры, фильмография"
+
+[contacts_label]
+other = "Кастинг и съёмки"
+[contacts_h1]
+other = "Пишите агенту"
+[contacts_h2]
+other = "Ирине Мелдерс"
+[contacts_lead]
+other = "Роман открыт для проб, эпизодических и долгосрочных ролей в кино, сериалах, рекламе и дубляже."

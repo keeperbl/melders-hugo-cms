@@ -1,0 +1,18 @@
+{{ $d := .Site.Data.landing }}
+<section id="photo" style="padding: clamp(40px, 6vw, 70px) 0 0;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 20px; padding: 0 clamp(20px, 4vw, 48px) 22px;">
+    <h2 style="margin: 0; font-family: 'Russo One', sans-serif; font-weight: 400; font-size: clamp(24px, 2.4vw, 34px); text-transform: uppercase; letter-spacing: -.01em;">{{ T "photo_heading" }}</h2>
+    <a href="{{ if eq .Language.Lang "en" }}/en/photo/{{ else }}/photo/{{ end }}" style="font-size: 14px; font-weight: 600;">{{ T "photo_all" }}</a>
+  </div>
+  <div style="overflow: hidden; border-top: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); padding: 24px 0;">
+    <div style="display: flex; width: max-content; gap: 16px; animation: m-marq 36s linear infinite;">
+      {{ range seq 2 }}
+      <div style="display: flex; gap: 16px;">
+        {{ range $d.strip }}
+        <span data-hover-still style="display: block;"><img src="{{ . | relURL }}" alt="{{ $d.hero_image_alt }}" loading="lazy" decoding="async" style="display: block; width: 300px; height: 195px; object-fit: cover; filter: grayscale(1); transition: filter .45s ease, transform .45s cubic-bezier(.2,.8,.2,1);"></span>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

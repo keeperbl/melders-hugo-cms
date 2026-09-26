@@ -1,0 +1,17 @@
+{{/* Лендинг: шрифты и keyframes. Всё остальное — инлайн-стили в партиалах. */}}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Inter+Tight:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+  .m-land { background: #08080A; color: #FFFFFF; font-family: 'Inter Tight', system-ui, sans-serif; overflow-x: hidden; }
+  .m-land *, .m-land *::before, .m-land *::after { box-sizing: border-box; }
+  .m-land a { color: #8B96FF; text-decoration: none; }
+  .m-land ::selection { background: #1B2AFF; color: #FFFFFF; }
+  .m-land [data-hover-bg]:hover { background: #1B2AFF; padding-left: 20px; }
+  .m-land [data-hover-lift]:hover { background: #1B2AFF; border-color: #1B2AFF; transform: translateY(-3px); }
+  .m-land [data-hover-still]:hover img { filter: none; transform: scale(1.05); }
+  @keyframes m-kb { from { transform: scale(1.04); } to { transform: scale(1.18) translate(-1.5%, -2%); } }
+  @keyframes m-rise { from { opacity: 0; transform: translateY(.62em); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes m-fadein { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes m-marq { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+  @keyframes m-hint { 0%, 100% { transform: translateY(0); opacity: .4; } 50% { transform: translateY(10px); opacity: 1; } }
+</style>

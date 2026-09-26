@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="{{ or .Site.Language.Lang "ru" }}">
+
+<head>
+  {{- partial "head.html" . -}}
+  {{ block "meta_tags" . }}{{ end }}
+  {{- partial "melders/styles.html" . -}}
+  {{ if eq .Language.Lang "ru" }}
+  <script>
+    (function() {
+      if (sessionStorage.getItem('lang_redirect_done')) return;
+      sessionStorage.setItem('lang_redirect_done', '1');
+      var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+      if (lang && !lang.startsWith('ru') && lang.startsWith('en')) {
+        window.location.replace('/en/');
+      }
+    })();
+  </script>
+  {{ end }}
+</head>
+
+<body>
+  <div class="m-land">
+    {{- partial "melders/nav.html" . -}}
+    {{- block "main" . }}{{- end }}
+    {{- partial "melders/footer.html" . -}}
+  </div>
+  {{ block "scripts" . }}{{ end }}
+</body>
+
+</html>

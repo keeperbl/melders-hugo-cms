@@ -1,0 +1,37 @@
+{
+  "params": [
+    {
+      "key": "Age",
+      "value": "13 · born 06.09.2012"
+    },
+    {
+      "key": "Height",
+      "value": "161 cm"
+    },
+    {
+      "key": "Eyes / hair",
+      "value": "Grey-blue · light brown"
+    },
+    {
+      "key": "Appearance",
+      "value": "Russian, European"
+    },
+    {
+      "key": "Based in",
+      "value": "St. Petersburg"
+    },
+    {
+      "key": "Travel",
+      "value": "Yes, including Moscow"
+    }
+  ],
+  "skills": [
+    "horse riding",
+    "ballroom dance · professional",
+    "skiing",
+    "karting",
+    "football",
+    "dubbing"
+  ],
+  "genres": "Comedy, detective, thriller, adventure, family, biopic, documentary."
+}

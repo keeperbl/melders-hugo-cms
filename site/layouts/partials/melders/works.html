@@ -1,0 +1,37 @@
+{{/* Фильмография из site/content/post — заголовок берётся из short_title, если он задан */}}
+{{ $posts := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+{{ $posts = $posts.ByDate.Reverse }}
+<section id="works" style="padding: 0 clamp(20px, 4vw, 48px) clamp(50px, 6vw, 80px);">
+  <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 16px;">
+    <h2 style="margin: 0; font-family: 'Russo One', sans-serif; font-weight: 400; font-size: clamp(30px, 4vw, 52px); letter-spacing: -.02em; text-transform: uppercase;">{{ T "works_heading" }}</h2>
+    <div style="font-size: 14px; color: rgba(255,255,255,.5);">2019 — {{ now.Year }} · {{ T "works_hint" }}</div>
+  </div>
+  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 26px;">
+    {{ $filters := slice (slice "all" (T "filter_all")) (slice "series" (T "filter_series")) (slice "film" (T "filter_film")) (slice "short" (T "filter_short")) (slice "dubbing" (T "filter_dubbing")) (slice "ad" (T "filter_ad")) }}
+    {{ range $i, $fl := $filters }}
+    <button type="button" data-filter="{{ index $fl 0 }}" style="padding: 11px 20px; background: {{ if eq $i 0 }}#1B2AFF{{ else }}transparent{{ end }}; border: 1px solid {{ if eq $i 0 }}#1B2AFF{{ else }}rgba(255,255,255,.28){{ end }}; color: #FFFFFF; font-family: 'Inter Tight', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; cursor: pointer;">{{ index $fl 1 }}{{ if eq $i 0 }} · {{ len $posts }}{{ end }}</button>
+    {{ end }}
+  </div>
+  <div data-works>
+    {{ range $n, $p := $posts }}
+    {{/* Тип работы для фильтров — по тегам, RU и EN словари */}}
+    {{ $tags := apply (or $p.Params.tags slice) "lower" "." }}
+    {{ $kind := "film" }}
+    {{ if or (in $tags "сериал") (in $tags "television") (in $tags "сериалы") }}{{ $kind = "series" }}{{ end }}
+    {{ if or (in $tags "короткометражка") (in $tags "короткий метр") (in $tags "short film") (in $tags "short") }}{{ $kind = "short" }}{{ end }}
+    {{ if or (in $tags "дубляж") (in $tags "dubbing") (in $tags "voice-over") }}{{ $kind = "dubbing" }}{{ end }}
+    {{ if or (in $tags "реклама") (in $tags "commercial") (in $tags "advertising") }}{{ $kind = "ad" }}{{ end }}
+    {{ $img := $p.Params.image }}
+    {{ if not $img }}{{ range $p.Translations }}{{ with .Params.image }}{{ $img = . }}{{ end }}{{ end }}{{ end }}
+    {{ $meta := delimit (first 3 (or $p.Params.tags slice)) " · " }}
+    {{ with $p.Params.role }}{{ $meta = printf "%s · %s" $meta . }}{{ end }}
+    <a href="{{ $p.Permalink }}" data-kind="{{ $kind }}" data-still="{{ with $img }}{{ . | relURL }}{{ end }}" data-hover-bg style="display: grid; grid-template-columns: 44px minmax(140px, 1fr) minmax(0, 210px) 62px; align-items: center; gap: clamp(10px, 1.4vw, 18px); padding: 16px 8px; border-top: 1px solid rgba(255,255,255,.12); color: #FFFFFF; transition: background .25s ease, padding-left .25s ease;">
+      <span style="font-size: 12px; font-weight: 700; color: rgba(255,255,255,.4);">{{ printf "%02d" (add $n 1) }}</span>
+      <span style="font-family: 'Russo One', sans-serif; font-size: clamp(17px, 1.7vw, 23px);">{{ or $p.Params.short_title $p.LinkTitle }}</span>
+      <span style="font-size: 13px; color: rgba(255,255,255,.62);">{{ $meta }}</span>
+      <span style="font-size: 14px; font-weight: 700; text-align: right;">{{ $p.Date.Format "2006" }}</span>
+    </a>
+    {{ end }}
+  </div>
+  <div style="border-top: 1px solid rgba(255,255,255,.12);"></div>
+</section>
